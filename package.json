@@ -1,0 +1,19 @@
+{
+  "name": "data-manipulator",
+  "version": "1.0.0",
+  "description": "convert scraped csv to meaningful json",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "./node_modules/.bin/tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/node": "^15.9.0",
+    "deep-copy-ts": "^0.5.0"
+  }
+}
