@@ -10,6 +10,7 @@ import {
 } from "./grClasses";
 const meetings = {};
 const data = json["result"];
+const results = [];
 
 function setupMeetings() {
   data.forEach((item) => {
@@ -52,8 +53,9 @@ setupMeetings();
 makeMotions();
 
 function makeMotions() {
-  let fail = 0;
-  let noMatch = 0;
+/*   let fail = 0;
+  let noMatch = 0; */
+  
   data.forEach((item) => {
     if (!item.antrag_berichterstatter || !item.antrag_ergebnisdetail) return;
     let motion = new GeneralMotion();
@@ -70,26 +72,28 @@ function makeMotions() {
 
     //welcome to hell, first split result in sentences
     const resultArray = item.antrag_ergebnisdetail.split("\n");
+    results.push(resultArray);
     //to interpret multiline results, analyze sentence type beforehand
-    motion.analyze(resultArray);
+    
+    //motion.analyze(resultArray);
 
-    if (resultArray.length != motion.sentenceTypes.length) {
+/*     if (resultArray.length != motion.sentenceTypes.length) {
       fail++;
       console.log(resultArray);
       console.log(motion.sentenceTypes);
       console.log("-------------------");
-    }
+    } */
     const meetingNo = item.sitzung.match(/^\d+/gm)[0];
     meetings[meetingNo].motions.push(motion);
   });
-  console.log("Could not interpret result: " + fail);
-  console.log("Unmatched sentences: " + noMatch);
+/*   console.log("Could not interpret result: " + fail);
+  console.log("Unmatched sentences: " + noMatch); */
 }
 
-const outputString = JSON.stringify(meetings);
+const outputString = JSON.stringify(results);
 
 // write file to disk
-fs.writeFile("./gr-nice.json", outputString, "utf8", (err) => {
+fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
   if (err) {
     console.log(`Error writing file: ${err}`);
   } else {
