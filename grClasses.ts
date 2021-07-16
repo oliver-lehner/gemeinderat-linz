@@ -4,6 +4,14 @@ export class Meeting {
   date: Date;
   motions: Object;
   url: string;
+
+  constructor(){
+    this.motions = new Object();
+  }
+
+  addMotion(id:string, motion:Motion){
+    this.motions[id] = motion;  
+  }
 }
 
 interface Votable {
@@ -15,71 +23,32 @@ interface Votable {
   absent?: string;
 }
 
+interface VoteResult {
+  pro?: string[];
+  withheld?: string[];
+  contra?: string[];
+}
+
 export class Motion implements Votable {
   title: string;
   submitter: string;
   pass: boolean;
+  votes: VoteResult;
   agendaItem: string;
   index: number;
-  id: string;
   forward?: boolean;
   forwardTo?: string;
-  contra?: string[];
-  withheld?: string[];
   bias?: string;
   absent?: string;
-
-  setContra(list: string) {
-    this.contra = list.split(",").map((p) => {
-      const matches = p.match(/S?K?F?PÖ|Die Grünen|ÖVP|NEOS/gm);
-      return matches ? matches[0] : null;
-    });
-  }
-
-  setWithheld(list: string) {
-    this.withheld = list.split(",").map((p) => {
-      const matches = p.match(/S?K?F?PÖ|Die Grünen|ÖVP|NEOS/gm);
-      return matches ? matches[0] : null;
-    });
-  }
-
-  private checkVoteInfo(sentence: string): Boolean {
-    if (!sentence) return false;
-    return (
-      sentence.match(/(?:Enthaltung|Gegenstimme|Stimmenthaltung):?(.+)/gm) !=
-      null
-    );
-  }
-
-  countVotes(result: string[], idx: number) {
-    const string = result[idx];
-    if (!string) return;
-    const resultRxMatches = [
-      ...string.matchAll(/(?:Enthaltung|Gegenstimme|Stimmenthaltung):?(.+)/gm),
-    ];
-    //if we have a result and it's for the main antrag
-    if (resultRxMatches[0] && resultRxMatches[0].length > 0) {
-      if (resultRxMatches[0][0].includes("nthaltung")) {
-        this.setWithheld(resultRxMatches[0][1]);
-      } else if (resultRxMatches[0][0].includes("Gegen")) {
-        this.setContra(resultRxMatches[0][1]);
-      }
-    } else {
-      console.log("Could not tally votes in string:" + string);
-    }
-    if (this.checkVoteInfo(result[idx + 1])) {
-      this.countVotes(result, idx + 1);
-    }
-  }
 }
 
 export class GeneralMotion extends Motion {
-  addenda: Addendum[];
-  changes: Change[];
-  chapters: ExtraMotion[];
   url: string;
   meetingNo: number;
-  secret: boolean;
+  addenda?: Addendum[];
+  changes?: Change[];
+  chapters?: ExtraMotion[];
+  secret?: boolean;
 
   addAddendum(addendum: Addendum) {
     if (!this.addenda) this.addenda = new Array() as Array<Addendum>;
@@ -94,138 +63,6 @@ export class GeneralMotion extends Motion {
   addChapter(chapter: ExtraMotion) {
     if (!this.chapters) this.chapters = new Array() as Array<ExtraMotion>;
     this.chapters.push(chapter);
-  }
-
-  matchAction(action: string) {
-    return [
-      ...action.matchAll(
-        /(?:(?<majority>mehrstimmig|einstimmig)? (?:(?<result>angenommen|abgelehnt)|(?:(?:dem |zum )(?<forwardTo>.*(?=zugewiesen))))|(?<noVote>nicht.*ab.*timmt)|(?<withdrawn>.*zurückgezogen))/gm
-      ),
-    ];
-  }
-
-  analyze(sentences) {
-    sentences.forEach((sentence, idx) => {
-      const matches = [
-        ...sentence.matchAll(
-          /(?:D[erasi]*)?(?<thing>.*)(?:(?:wurde|wird)(?<action>.+(?=.))|(?:ist(?<attribute>.*)))/gm
-        ),
-      ];
-      if (matches[0]) {
-        let result = matches[0];
-        //console.log(result);
-        if (result.groups) {
-          const thing = result.groups.thing;
-          const action = result.groups.action;
-          //if (thing != " Antrag ") console.log(thing);
-          const motionType = thing.match(
-            /(Antrag\b.+Zusatzantrag|Antrag.+Abänderungsantrag\b|Antrag\b|Abänderungsantrag\b|Zusatzantrag\b)/gm
-          );
-          if (
-            motionType &&
-            (motionType[0] == "Zusatzantrag" ||
-              motionType[0] == "Abänderungsantrag")
-          ) {
-            let extraMotion = new ExtraMotion();
-            const thingMatches = [
-              ...thing.matchAll(
-                /(?:der (?<party>[NEOSPÖVFGrünen, ]*)\s)|(?:von\s(?<member>.*))/gm
-              ),
-            ];
-            //console.log( thingMatches)
-            if (thingMatches[0]) {
-              const subEntity =
-                thingMatches[0].groups.party || thingMatches[0].groups.member;
-              if (subEntity) extraMotion.submitter = subEntity;
-            }
-            if (action) {
-              const actionMatches = this.matchAction(action);
-              if (actionMatches[0]) {
-                let groups = actionMatches[0].groups;
-                extraMotion.pass = groups.result == "angenommen";
-                if (groups.noVote != null) extraMotion.noVote = true;
-                if (groups.forwardTo != null) {
-                  extraMotion.forwardTo = groups.forwardTo;
-                  extraMotion.forward = true;
-                }
-                if (groups.majority == "mehrstimmig") {
-                  extraMotion.countVotes(sentences, idx + 1);
-                }
-                if (motionType[0] == "Zusatzantrag")
-                  this.addAddendum(extraMotion);
-                if (motionType[0] == "Abänderungsantrag")
-                  this.addChange(extraMotion);
-              }
-              //console.log(extraMotion);
-            }
-          } else if (motionType) {
-            const actionMatches = this.matchAction(action);
-            if (actionMatches[0]) {
-              let groups = actionMatches[0].groups;
-              this.pass = groups.result == "angenommen";
-              if (groups.forwardTo != null) {
-                this.forwardTo = groups.forwardTo;
-                this.forward = true;
-              }
-              if (groups.majority == "mehrstimmig") {
-                this.countVotes(sentences, idx + 1);
-              }
-            }
-            if (thing.match(/Antrag\b.+Zusatzantrag/gm)) {
-              this.addAddendum(new Addendum());
-            } else if (thing.match(/Antrag.+Abänderungsantrag\b/gm)) {
-              this.addChange(new Change());
-            }
-          } else if (thing.match(/Zu?weisung/gm)) {
-            //typos are usually the cause for weird regexes like this
-            const thingMatches = [
-              ...thing.matchAll(
-                /(?<=(?:(?:a|i)n de(?:n|r))|zum) (?<forwardTo>.*)/gm
-              ),
-            ];
-            const actionMatches = this.matchAction(action);
-            if (thingMatches[0]) {
-              this.forwardTo = thingMatches[0].groups.forwardTo;
-            }
-            if (actionMatches[0]) {
-              let groups = actionMatches[0].groups;
-              this.forward = groups.result == "angenommen";
-              if (groups.majority == "mehrstimmig") {
-                this.countVotes(sentences, idx + 1);
-              }
-            }
-            //console.log(`THING: ${thing}, ACTION: ${action}`);
-          } else if (thing.match(/(\d.*\d)|\d/gm)) {
-            const chapter = new ExtraMotion();
-            chapter.title = thing.match(/(\d.*\d)|\d/gm);
-
-            if (action) {
-              const actionMatches = this.matchAction(action);
-              if (actionMatches[0]) {
-                let groups = actionMatches[0].groups;
-                chapter.pass = groups.result == "angenommen";
-                if (groups.majority == "mehrstimmig") {
-                  chapter.countVotes(sentences, idx + 1);
-                }
-              }
-              this.addChapter(chapter);
-            }
-          } else {
-            //console.log(`THING: ${thing}, ACTION: ${action}`);
-          }
-        }
-      } else if (sentence.match(/nthaltung|Gegenstimme/)) {
-        //console.log("Vote: "+sentence);
-      } else if (sentence.includes("Befangenheit")) {
-        this.bias = sentence;
-      } else if (sentence.includes("vertraulich")) {
-        this.secret = true;
-      } else if (sentence.includes("nicht anwesend")) {
-        this.absent = sentence;
-      } else {
-        console.log("no match: " + sentence);
-      }
-    });
   }
 }
 
@@ -242,18 +79,213 @@ export class Change extends ExtraMotion {
   title = "Abänderungsantrag";
 }
 
-/* export class Forward extends ExtraMotion {
-  forwardTo: string;
-  title = "Zuweisungssantrag";
-
-  //takes a whole sentence and extracts recipients
-  setForwardTo(string) {
-    let rxResult = [
-      ...string.matchAll(/Antrag.+(?:an den|dem)\s(.*)(?:wurde|zugewiesen)/gm),
-    ];
-    //console.log(resultRxMatches);
-    if (rxResult[0] && rxResult[0].length > 1) {
-      this.forwardTo = rxResult[0][1];
-    }
+export class MotionMaker {
+  //TODO handle single person case (looking at you, neos)
+  private partyListToArray(list: string): string[] {
+    return list.split(",").map((p) => {
+      const matches = p.match(/S?K?F?PÖ|Die Grünen|ÖVP|NEOS|Neos/gm);
+      return matches ? matches[0] : null;
+    });
   }
-} */
+
+  private checkVoteInfo(sentence: string): RegExpMatchArray | undefined {
+    if (!sentence) return undefined;
+    return sentence.match(/(?:Enthaltung|Gegenstimme|Stimmenthaltung):?(.+)/gm);
+  }
+
+  private countVotes(values: string[], idx: number): VoteResult {
+    let result: VoteResult = {};
+
+    result.pro = ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"];
+    while (this.checkVoteInfo(values[idx]) != undefined) {
+      const resultRxMatches = this.checkVoteInfo(values[idx]);
+      if (resultRxMatches[0] && resultRxMatches[0].length > 0) {
+        if (resultRxMatches[0].includes("nthaltung")) {
+          result.withheld = this.partyListToArray(resultRxMatches[0]);
+          for (let party of result.withheld) {
+            result.pro.splice(result.pro.indexOf(party), 1);
+          }
+        } else if (resultRxMatches[0].includes("Gegen")) {
+          result.contra = this.partyListToArray(resultRxMatches[0]);
+          for (let party of result.contra) {
+            result.pro.splice(result.pro.indexOf(party), 1);
+          }
+        }
+      } else {
+        console.log("Could not tally votes in string:" + values[idx]);
+      }
+      idx++;
+    }
+    return result;
+  }
+
+  matchAction(action: string) {
+    return [
+      ...action.matchAll(
+        /(?:(?<majority>mehrstimmig|einstimmig)? (?:(?<result>angenommen|abgelehnt)|(?:(?:dem |zum )(?<forwardTo>.*(?=zugewiesen))))|(?<noVote>nicht.*ab.*timmt)|(?<withdrawn>.*zurückgezogen))/gm
+      ),
+    ];
+  }
+
+  make(item): Motion {
+    let motion = new GeneralMotion();
+
+    if (!item.antrag_berichterstatter || !item.antrag_ergebnisdetail) {
+      if (
+        item.dringlich_titel &&
+        item.dringlich_ergebnisdetail &&
+        item.dringlich_berichterstatter
+      ) {
+        item.antrag_berichterstatter = item.dringlich_berichterstatter;
+        item.antrag_ergebnisdetail = item.dringlich_ergebnisdetail;
+        item.titel = item.dringlich_titel;
+        if (item["dringlich_wortprotokoll-href"]) {
+          item["wortprotokoll-href"] = item["dringlich_wortprotokoll-href"];
+        }
+      } else {
+        return;
+      }
+    }
+    const titleGroup = [
+      ...item.antrag_titel.matchAll(
+        /^(?<agendaItem>[A-Z])(?<index>[0-9]+)\.\s(?<value>(.|\n)+)/gm
+      ),
+    ][0];
+
+    let submitter = item.antrag_berichterstatter.match(
+      /S?K?F?PÖ|Die Grünen|ÖVP|NEOS|Grüne/gm
+    )
+      ? item.antrag_berichterstatter.match(
+          /S?K?F?PÖ|Die Grünen|ÖVP|NEOS|Grüne/gm
+        )[0]
+      : "";
+    if (submitter == "Grüne") submitter = "Die Grünen";
+
+    motion.title = titleGroup.groups.value;
+    motion.agendaItem = titleGroup.groups.agendaItem;
+    motion.index = parseInt(titleGroup.groups.index);
+    //motion.id = meetingNo.toString()+motion.agendaItem+titleGroup.groups.index;
+
+    motion.url = item["wortprotokoll-href"] || item["web-scraper-start-url"];
+
+    const result = item.antrag_ergebnisdetail.split("\n");
+    
+    result.forEach((sentence, idx) => {
+      const matches = [
+        ...sentence.matchAll(
+          /(?:D[erasi]*)?(?<thing>.*)(?:(?:wurde|wird)(?<action>.+(?=.))|(?:ist(?<attribute>.*)))/gm
+        ),
+      ];
+      if (matches[0]) {
+        if (matches[0].groups) {
+          const thing = matches[0].groups.thing;
+          const action = matches[0].groups.action;
+          const motionType = thing.match(
+            /(Antrag\b.+Zusatzantrag|Antrag.+Abänderungsantrag\b|Antrag\b|Abänderungsantrag\b|Zusatzantrag\b)/gm
+          );
+          //there's much room for improvement down there vv
+
+          if (
+            motionType &&
+            (motionType[0] == "Zusatzantrag" ||
+              motionType[0] == "Abänderungsantrag")
+          ) {
+            let extraMotion = new ExtraMotion();
+            const thingMatches = [
+              ...thing.matchAll(
+                /(?:der (?<party>[NEOSPÖVFGrünen, ]*)\s)|(?:von\s(?<member>.*))/gm
+              ),
+            ];
+            if (thingMatches[0]) {
+              const subEntity =
+                thingMatches[0].groups.party || thingMatches[0].groups.member;
+              if (subEntity) extraMotion.submitter = subEntity;
+            }
+            if (action) {
+              const actionMatches = this.matchAction(action);
+              if (actionMatches[0]) {
+                let groups = actionMatches[0].groups;
+                extraMotion.pass = groups.result == "angenommen";
+                if (groups.noVote != null) extraMotion.noVote = true;
+                if (groups.forwardTo != null) {
+                  extraMotion.forwardTo = groups.forwardTo;
+                  extraMotion.forward = true;
+                }
+                if (groups.majority == "mehrstimmig") {
+                  extraMotion.votes = this.countVotes(result, idx + 1);
+                }
+                if (motionType[0] == "Zusatzantrag")
+                  motion.addAddendum(extraMotion);
+                if (motionType[0] == "Abänderungsantrag")
+                  motion.addChange(extraMotion);
+              }
+            }
+          } else if (motionType) {
+            const actionMatches = this.matchAction(action);
+            if (actionMatches[0]) {
+              let groups = actionMatches[0].groups;
+              motion.pass = groups.result == "angenommen";
+              if (groups.forwardTo != null) {
+                motion.forwardTo = groups.forwardTo;
+                motion.forward = true;
+              }
+              if (groups.majority == "mehrstimmig") {
+                motion.votes = this.countVotes(result, idx + 1);
+              }
+            }
+            if (thing.match(/Antrag\b.+Zusatzantrag/gm)) {
+              motion.addAddendum(new Addendum());
+            } else if (thing.match(/Antrag.+Abänderungsantrag\b/gm)) {
+              motion.addChange(new Change());
+            }
+          } else if (thing.match(/Zu?weisung/gm)) {
+            //typos are usually the cause for weird regexes like this
+            const thingMatches = [
+              ...thing.matchAll(
+                /(?<=(?:(?:a|i)n de(?:n|r))|zum) (?<forwardTo>.*)/gm
+              ),
+            ];
+            const actionMatches = this.matchAction(action);
+            if (thingMatches[0]) {
+              motion.forwardTo = thingMatches[0].groups.forwardTo;
+            }
+            if (actionMatches[0]) {
+              let groups = actionMatches[0].groups;
+              motion.forward = groups.result == "angenommen";
+              if (groups.majority == "mehrstimmig") {
+                motion.votes = this.countVotes(result, idx + 1);
+              }
+            }
+          } else if (thing.match(/(\d.*\d)|\d/gm)) {
+            const chapter = new ExtraMotion();
+            chapter.title = thing.match(/(\d.*\d)|\d/gm);
+
+            if (action) {
+              const actionMatches = this.matchAction(action);
+              if (actionMatches[0]) {
+                let groups = actionMatches[0].groups;
+                chapter.pass = groups.result == "angenommen";
+                if (groups.majority == "mehrstimmig") {
+                  chapter.votes = this.countVotes(result, idx + 1);
+                }
+              }
+              motion.addChapter(chapter);
+            }
+          } else {
+          }
+        }
+      } else if (sentence.match(/nthaltung|Gegenstimme/)) {
+      } else if (sentence.includes("Befangenheit")) {
+        motion.bias = sentence;
+      } else if (sentence.includes("vertraulich")) {
+        motion.secret = true;
+      } else if (sentence.includes("nicht anwesend")) {
+        motion.absent = sentence;
+      } else {
+        console.log("no match: " + sentence);
+      }
+    });
+
+    return motion;
+  }
+}
