@@ -10,7 +10,8 @@ export class Meeting {
   }
 
   addMotion(id:string, motion:Motion){
-    this.motions[id] = motion;  
+    this.motions[id] = 
+    motion;  
   }
 }
 
@@ -34,6 +35,7 @@ export class Motion implements Votable {
   submitter: string;
   pass: boolean;
   votes: VoteResult;
+  graphics: Object;
   agendaItem: string;
   index: number;
   forward?: boolean;
@@ -160,7 +162,7 @@ export class MotionMaker {
         )[0]
       : "";
     if (submitter == "Grüne") submitter = "Die Grünen";
-
+    motion.submitter = submitter;
     motion.title = titleGroup.groups.value;
     motion.agendaItem = titleGroup.groups.agendaItem;
     motion.index = parseInt(titleGroup.groups.index);
@@ -211,9 +213,9 @@ export class MotionMaker {
                   extraMotion.forwardTo = groups.forwardTo;
                   extraMotion.forward = true;
                 }
-                if (groups.majority == "mehrstimmig") {
+                //if (groups.majority == "mehrstimmig") {
                   extraMotion.votes = this.countVotes(result, idx + 1);
-                }
+                //}
                 if (motionType[0] == "Zusatzantrag")
                   motion.addAddendum(extraMotion);
                 if (motionType[0] == "Abänderungsantrag")
@@ -229,9 +231,9 @@ export class MotionMaker {
                 motion.forwardTo = groups.forwardTo;
                 motion.forward = true;
               }
-              if (groups.majority == "mehrstimmig") {
+              //if (groups.majority == "mehrstimmig") {
                 motion.votes = this.countVotes(result, idx + 1);
-              }
+              //}
             }
             if (thing.match(/Antrag\b.+Zusatzantrag/gm)) {
               motion.addAddendum(new Addendum());
@@ -252,9 +254,9 @@ export class MotionMaker {
             if (actionMatches[0]) {
               let groups = actionMatches[0].groups;
               motion.forward = groups.result == "angenommen";
-              if (groups.majority == "mehrstimmig") {
+              //if (groups.majority == "mehrstimmig") {
                 motion.votes = this.countVotes(result, idx + 1);
-              }
+              //}
             }
           } else if (thing.match(/(\d.*\d)|\d/gm)) {
             const chapter = new ExtraMotion();
@@ -265,9 +267,9 @@ export class MotionMaker {
               if (actionMatches[0]) {
                 let groups = actionMatches[0].groups;
                 chapter.pass = groups.result == "angenommen";
-                if (groups.majority == "mehrstimmig") {
+                //if (groups.majority == "mehrstimmig") {
                   chapter.votes = this.countVotes(result, idx + 1);
-                }
+                //}
               }
               motion.addChapter(chapter);
             }
