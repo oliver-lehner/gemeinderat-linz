@@ -1,14 +1,9 @@
 import * as fs from "fs";
 import * as json from "./repair.json";
-import { Meeting, Motion, MotionMaker } from "./grClasses";
-import { partyFacts } from "./partyfacts";
-import * as pug from "pug";
-import { optimize } from "svgo";
+import { Meeting, MotionMaker } from "./grClasses";
 
 const meetings = {};
 const data = json["result"];
-const svgIds = new Array();
-let cssString = "";
 
 function setupMeetings() {
   data.forEach((item) => {
@@ -65,7 +60,6 @@ function makeMotions() {
       const motion = maker.make(item);
 
       if (motion != undefined) {
-        addPieStyles(motion);
         meetings[meetingNo].addMotion(id, motion);
       }
     }
@@ -95,50 +89,7 @@ function sortMotions() {
   }
 }
 
-function encodeSVG(data): string {
-  data = data.replace(/>\s{1,}</g, `><`);
-  data = data.replace(/\s{2,}/g, ` `);
-  data = data.replace(/[\r\n%#()<>?[\\\]^`{|}]/g, encodeURIComponent);
-  return `background-image: url('data:image/svg+xml,${data}');`;
-}
 
-function createId(parties: string[]): string {
-  return parties
-    .map((value) => {
-      if (value) return value.charAt(0);
-    })
-    .join("");
-}
-
-function addPieStyles(motion: Motion) {
-  for (let index in motion.votes) {
-    const parties = motion.votes[index];
-    const id = createId(parties);
-
-    if (!svgIds.includes(id) && id !== "") {
-      let offset = 25;
-      let segments = new Array();
-      svgIds.push(id);
-
-      for (let party of parties) {
-        if (partyFacts[party]) {
-          segments.push({
-            color: partyFacts[party].color,
-            percent: partyFacts[party].percent,
-            offset: offset,
-          });
-          offset -= partyFacts[party].percent;
-        }
-      }
-
-      const compiledFunction = pug.compileFile("./pie.pug");
-      const result = optimize(compiledFunction({ segments: segments }), {
-        multipass: true,
-      });
-      cssString += `.pie-${id} {\n${encodeSVG(result.data)}\n}\n`;
-    }
-  }
-}
 
 setupMeetings();
 makeMotions();
@@ -154,10 +105,4 @@ fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
   }
 });
 
-fs.writeFile("./pieStyles.css", cssString, "utf8", (err) => {
-  if (err) {
-    console.log(`Error writing file: ${err}`);
-  } else {
-    console.log(`File is written successfully!`);
-  }
-});
+
