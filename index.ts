@@ -1,47 +1,10 @@
 import * as fs from "fs";
 import * as json from "./repair.json";
-import { Meeting, MotionMaker } from "./grClasses";
+import { MotionMaker } from "./grClasses";
 
-const meetings = {};
+let output = [];
+const agendas = {};
 const data = json["result"];
-
-function setupMeetings() {
-  data.forEach((item) => {
-    const dateRxMatches = [
-      ...item.sitzung.matchAll(
-        /(\d+)\.(?:\sGemeinderatssitzung\sam\s)(\d+)\.(\d+)\.(\d{4})(?:\sum\s)(\d+)/gm
-      ),
-    ];
-    let meetingNo = Array.isArray(dateRxMatches[0]) ? dateRxMatches[0][1] : 0;
-    if (!meetings[meetingNo] && meetingNo > 0) {
-      let meeting = new Meeting();
-      meeting.date = new Date(
-        parseInt(dateRxMatches[0][4]),
-        parseInt(dateRxMatches[0][3]),
-        parseInt(dateRxMatches[0][2]),
-        parseInt(dateRxMatches[0][5]),
-        0,
-        0,
-        0
-      );
-      meeting.url = item["web-scraper-start-url"];
-      meeting.title = item.sitzung;
-
-      //regex agenda string
-      const agendaRxMatches = [
-        ...item.tagesordnung.matchAll(
-          /(?<index>[A-Z])\.\s*(?<value>[\wÄÖÜäöüß€§.,\-;\(\)"\/: ]+)/gm
-        ),
-      ];
-      let agenda = {};
-      agendaRxMatches.forEach((to) => {
-        agenda[to.groups.index] = to.groups.value;
-      });
-      meeting.agenda = agenda;
-      meetings[meetingNo] = meeting;
-    }
-  });
-}
 
 function makeMotions() {
   const maker = new MotionMaker();
@@ -53,49 +16,67 @@ function makeMotions() {
       ),
     ][0];
     if (titleInfo) {
-      const meetingNo = item.sitzung.match(/^\d+/gm)[0];
-      if (parseInt(meetingNo) > 51) return; //scraped data includes one meeting from period before
+      const dateRxMatches = [
+        ...item.sitzung.matchAll(
+          /(\d+)\.(?:\sGemeinderatssitzung\sam\s)(\d+)\.(\d+)\.(\d{4})(?:\sum\s)(\d+)/gm
+        ),
+      ];
+      if (!dateRxMatches[0]) {
+        let debug = true;
+        debug;
+      }
+      let meetingNo:number = Array.isArray(dateRxMatches[0]) ? parseInt(dateRxMatches[0][1]) : 0;
+
+      let date = new Date(
+        parseInt(dateRxMatches[0][4]),
+        parseInt(dateRxMatches[0][3]),
+        parseInt(dateRxMatches[0][2]),
+        parseInt(dateRxMatches[0][5]),
+        0,
+        0,
+        0
+      );
+      let meetingUrl = item["web-scraper-start-url"];
+
+      //regex agenda string
+      const agendaRxMatches = [
+        ...item.tagesordnung.matchAll(
+          /(?<index>[A-Z])\.\s*(?<value>[\wÄÖÜäöüß€§.,\-;\(\)"\/: ]+)/gm
+        ),
+      ];
+      let agenda = {};
+      agendaRxMatches.forEach((to) => {
+        agenda[to.groups.index] = to.groups.value;
+      });
+      agendas[meetingNo] = agenda;
+
+      if (meetingNo > 51) return; //scraped data includes one meeting from period before
       const id =
         meetingNo + titleInfo.groups.agendaItem + titleInfo.groups.index;
       const motion = maker.make(item);
 
       if (motion != undefined) {
-        meetings[meetingNo].addMotion(id, motion);
+        motion.id = id;
+        motion.meetingUrl = meetingUrl;
+        motion.meetingNo = meetingNo;
+        motion.agendaText = agendas[meetingNo][titleInfo.groups.agendaItem];
+        motion.date = date;
+        output.push(motion);
       }
     }
   });
 }
 
-function sortMotions() {
-  for (let meeting in Object.entries(meetings)) {
-    if (meetings[meeting] !== undefined) {
-      const sortedData = Object.entries(meetings[meeting].motions).sort(
-        (a, b) => {
-          const matchA = [...a[0].matchAll(/([A-Z])(\d+)$/gm)];
-          const matchB = [...b[0].matchAll(/([A-Z])(\d+)$/gm)];
-          const score =
-            matchA[0][1].charCodeAt(0) * 100 + //100 is quite arbitrary, but without weighing the charcode, A1 and B1 would only be 1 apart
-            parseInt(matchA[0][2]) -
-            (matchB[0][1].charCodeAt(0) * 100 + parseInt(matchB[0][2]));
-          return score;
-        }
-      );
-      //sortedData looks like this: [['id',{obj}]]
-      const unwrappedData = new Object();
-      //but I want ['id':{obj}]
-      sortedData.forEach((value) => (unwrappedData[value[0]] = value[1]));
-      meetings[meeting].motions = unwrappedData;
-    }
-  }
-}
-
-
-
-setupMeetings();
 makeMotions();
-sortMotions();
 
-const outputString = JSON.stringify(meetings);
+const sorted = output.sort((a, b) => {
+  const calcScore = (val) =>
+    val.meetingNo * (val.agendaItem.charCodeAt(0) * 100 + val.index);
+  const score = calcScore(a) - calcScore(b);
+  return score;
+});
+
+const outputString = JSON.stringify(sorted);
 
 fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
   if (err) {
@@ -104,5 +85,3 @@ fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
     console.log(`File is written successfully!`);
   }
 });
-
-
