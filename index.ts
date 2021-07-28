@@ -25,7 +25,9 @@ function makeMotions() {
         let debug = true;
         debug;
       }
-      let meetingNo:number = Array.isArray(dateRxMatches[0]) ? parseInt(dateRxMatches[0][1]) : 0;
+      let meetingNo: number = Array.isArray(dateRxMatches[0])
+        ? parseInt(dateRxMatches[0][1])
+        : 0;
 
       let date = new Date(
         parseInt(dateRxMatches[0][4]),
@@ -71,7 +73,7 @@ makeMotions();
 
 const sorted = output.sort((a, b) => {
   const calcScore = (val) =>
-    val.meetingNo * (val.agendaItem.charCodeAt(0) * 100 + val.index);
+    val.meetingNo * 10000 + val.agendaItem.charCodeAt(0) * 100 + val.index;
   const score = calcScore(a) - calcScore(b);
   return score;
 });
