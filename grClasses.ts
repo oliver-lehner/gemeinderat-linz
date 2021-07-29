@@ -13,6 +13,11 @@ interface VoteResult {
   contra?: string[];
 }
 
+enum ExtraTypes {
+  "addendum",
+  "change",
+  "chapter",
+}
 export class Motion implements Votable {
   title: string;
   submitter: string;
@@ -33,30 +38,23 @@ export class GeneralMotion extends Motion {
   agendaText: string;
   meetingNo: number;
   meetingUrl: string;
-  addenda?: Addendum[];
-  changes?: Change[];
-  chapters?: ExtraMotion[];
+  extras?: ExtraMotion[];
   secret?: boolean;
 
-  addAddendum(addendum: Addendum) {
-    if (!this.addenda) this.addenda = new Array() as Array<Addendum>;
-    this.addenda.push(addendum);
-  }
-
-  addChange(change: Change) {
-    if (!this.changes) this.changes = new Array() as Array<Change>;
-    this.changes.push(change);
-  }
-
-  addChapter(chapter: ExtraMotion) {
-    if (!this.chapters) this.chapters = new Array() as Array<ExtraMotion>;
-    this.chapters.push(chapter);
+  addExtra(extra: ExtraMotion) {
+    if (!this.extras) this.extras = new Array() as Array<ExtraMotion>;
+    this.extras.push(extra);
   }
 }
 
 export class ExtraMotion extends Motion {
+  type: string;
   noVote?: boolean;
   sub?: string;
+
+  setType(type: number) {
+    this.type = ExtraTypes[type];
+  }
 }
 
 export class Addendum extends ExtraMotion {
@@ -203,9 +201,11 @@ export class MotionMaker {
                 extraMotion.votes = this.countVotes(result, idx + 1);
                 //}
                 if (motionType[0] == "Zusatzantrag")
-                  motion.addAddendum(extraMotion);
+                  extraMotion.setType(ExtraTypes.addendum);
+
                 if (motionType[0] == "Abänderungsantrag")
-                  motion.addChange(extraMotion);
+                  extraMotion.setType(ExtraTypes.change);
+                motion.addExtra(extraMotion);
               }
             }
           } else if (motionType) {
@@ -257,7 +257,8 @@ export class MotionMaker {
                 chapter.votes = this.countVotes(result, idx + 1);
                 //}
               }
-              motion.addChapter(chapter);
+              chapter.setType(ExtraTypes.chapter);
+              motion.addExtra(chapter);
             }
           } else {
           }
