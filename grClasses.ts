@@ -22,7 +22,7 @@ export class Motion implements Votable {
   title: string;
   submitter: string;
   pass: boolean;
-  votes: VoteResult;  
+  votes: VoteResult;
   forward?: boolean;
   forwardTo?: string;
   bias?: string;
@@ -79,29 +79,35 @@ export class MotionMaker {
     return sentence.match(/(?:Enthaltung|Gegenstimme|Stimmenthaltung):?(.+)/gm);
   }
 
-  private countVotes(values: string[], idx: number): VoteResult {
+  private countVotes(values: string[], pass:boolean, unisono:boolean, idx: number): VoteResult {
     let result: VoteResult = {};
-
-    result.pro = ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"];
-    while (this.checkVoteInfo(values[idx]) != undefined) {
-      const resultRxMatches = this.checkVoteInfo(values[idx]);
-      if (resultRxMatches[0] && resultRxMatches[0].length > 0) {
-        if (resultRxMatches[0].includes("nthaltung")) {
-          result.withheld = this.partyListToArray(resultRxMatches[0]);
-          for (let party of result.withheld) {
-            result.pro.splice(result.pro.indexOf(party), 1);
+    let info = this.checkVoteInfo(values[idx]);
+    if (pass && unisono) {
+      result.pro = ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"];
+    } else if (!pass && unisono) {
+      result.contra = ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"];
+    } else if(info != undefined) {
+      result.pro = ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"];
+      while (info != undefined) {
+        if (info[0] && info[0].length > 0) {
+          if (info[0].includes("nthaltung")) {
+            result.withheld = this.partyListToArray(info[0]);
+            for (let party of result.withheld) {
+              result.pro.splice(result.pro.indexOf(party), 1);
+            }
+          } else if (info[0].includes("Gegen")) {
+            result.contra = this.partyListToArray(info[0]);
+            for (let party of result.contra) {
+              result.pro.splice(result.pro.indexOf(party), 1);
+            }
           }
-        } else if (resultRxMatches[0].includes("Gegen")) {
-          result.contra = this.partyListToArray(resultRxMatches[0]);
-          for (let party of result.contra) {
-            result.pro.splice(result.pro.indexOf(party), 1);
-          }
+        } else {
+          console.log("Could not tally votes in string:" + values[idx]);
         }
-      } else {
-        console.log("Could not tally votes in string:" + values[idx]);
+        info = this.checkVoteInfo(values[++idx]);
       }
-      idx++;
     }
+
     return result;
   }
 
@@ -192,13 +198,15 @@ export class MotionMaker {
               if (actionMatches[0]) {
                 let groups = actionMatches[0].groups;
                 extraMotion.pass = groups.result == "angenommen";
+                let unisono = groups.majority == "einstimmig";
                 if (groups.noVote != null) extraMotion.noVote = true;
                 if (groups.forwardTo != null) {
                   extraMotion.forwardTo = groups.forwardTo;
                   extraMotion.forward = true;
+                  //TODO: 1427 2u3 werden nicht geforwardet
                 }
                 //if (groups.majority == "mehrstimmig") {
-                extraMotion.votes = this.countVotes(result, idx + 1);
+                extraMotion.votes = this.countVotes(result, extraMotion.pass, unisono, idx + 1);
                 //}
                 if (motionType[0] == "Zusatzantrag")
                   extraMotion.setType(ExtraTypes.addendum);
@@ -212,19 +220,15 @@ export class MotionMaker {
             const actionMatches = this.matchAction(action);
             if (actionMatches[0]) {
               let groups = actionMatches[0].groups;
+              let unisono = groups.majority == "einstimmig";
               motion.pass = groups.result == "angenommen";
               if (groups.forwardTo != null) {
                 motion.forwardTo = groups.forwardTo;
                 motion.forward = true;
               }
               //if (groups.majority == "mehrstimmig") {
-              motion.votes = this.countVotes(result, idx + 1);
+              motion.votes = this.countVotes(result, motion.pass || motion.forward, unisono, idx + 1);
               //}
-            }
-            if (thing.match(/Antrag\b.+Zusatzantrag/gm)) {
-              motion.addAddendum(new Addendum());
-            } else if (thing.match(/Antrag.+Abänderungsantrag\b/gm)) {
-              motion.addChange(new Change());
             }
           } else if (thing.match(/Zu?weisung/gm)) {
             //typos are usually the cause for weird regexes like this
@@ -239,9 +243,10 @@ export class MotionMaker {
             }
             if (actionMatches[0]) {
               let groups = actionMatches[0].groups;
+              let unisono = groups.majority == "einstimmig";
               motion.forward = groups.result == "angenommen";
               //if (groups.majority == "mehrstimmig") {
-              motion.votes = this.countVotes(result, idx + 1);
+              motion.votes = this.countVotes(result, motion.forward, unisono, idx + 1);
               //}
             }
           } else if (thing.match(/(\d.*\d)|\d/gm)) {
@@ -252,9 +257,10 @@ export class MotionMaker {
               const actionMatches = this.matchAction(action);
               if (actionMatches[0]) {
                 let groups = actionMatches[0].groups;
+                let unisono = groups.majority == "einstimmig";
                 chapter.pass = groups.result == "angenommen";
                 //if (groups.majority == "mehrstimmig") {
-                chapter.votes = this.countVotes(result, idx + 1);
+                chapter.votes = this.countVotes(result,chapter.pass, unisono,  idx + 1);
                 //}
               }
               chapter.setType(ExtraTypes.chapter);

@@ -352,7 +352,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1390",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -637,7 +637,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1351",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -715,7 +715,7 @@
     "forwardTo": "Sozialausschuss ",
     "forward": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -795,7 +795,7 @@
     "pass": false,
     "forwardTo": "Infrastrukturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "2I6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=89",
     "meetingNo": 2,
@@ -910,7 +910,7 @@
     "pass": false,
     "forwardTo": "Infrastrukturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "2I12",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=89",
     "meetingNo": 2,
@@ -1002,7 +1002,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "2I18",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=89",
     "meetingNo": 2,
@@ -1017,7 +1017,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1369",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["ÖVP", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ"],
       "contra": ["FPÖ"]
     },
@@ -1047,7 +1047,7 @@
         "submitter": "FPÖ",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["FPÖ"],
           "withheld": ["SPÖ", "ÖVP", "Die Grünen", "KPÖ"],
           "contra": ["NEOS"]
         },
@@ -1221,7 +1221,7 @@
         "submitter": "ÖVP",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["ÖVP", "Die Grünen"],
           "withheld": ["SPÖ", "FPÖ", "KPÖ"],
           "contra": ["NEOS"]
         },
@@ -1231,7 +1231,7 @@
         "submitter": "Grünen",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["ÖVP", "Die Grünen", "KPÖ"],
           "withheld": ["SPÖ", "FPÖ"],
           "contra": ["NEOS"]
         },
@@ -1241,7 +1241,7 @@
         "submitter": "SPÖ",
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["SPÖ", "FPÖ"],
           "withheld": ["ÖVP", "Die Grünen", "KPÖ"],
           "contra": ["NEOS"]
         },
@@ -1250,7 +1250,7 @@
     ],
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "KPÖ"],
       "withheld": ["ÖVP", "Die Grünen"],
       "contra": ["NEOS"]
     },
@@ -1402,7 +1402,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1440",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -1447,7 +1447,7 @@
       {
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["FPÖ", "ÖVP", "NEOS"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -1456,7 +1456,7 @@
     ],
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "ÖVP", "NEOS"],
       "withheld": ["SPÖ"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -1509,7 +1509,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "4K7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=77",
     "meetingNo": 4,
@@ -1536,7 +1536,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["Die Grünen", "KPÖ"],
           "withheld": ["SPÖ", "NEOS"],
           "contra": ["FPÖ", "ÖVP"]
         },
@@ -1616,7 +1616,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ", "NEOS"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -1660,7 +1660,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1435",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -1728,7 +1728,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1430",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["ÖVP", "NEOS"],
       "withheld": ["SPÖ", "FPÖ", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -2176,7 +2176,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1497",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": [null, "NEOS", "KPÖ"]
     },
@@ -2185,7 +2185,7 @@
         "submitter": "ÖVP",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": [null, "NEOS", "KPÖ"]
         },
@@ -2207,7 +2207,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Finanzen ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O4",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2237,7 +2237,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2253,7 +2253,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2286,7 +2286,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Verkehr ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O9",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2319,7 +2319,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Frauen, Umwelt, Naturschutz und Bildung sowie dem Ausschuss für Soziales, Jugend, Familie und Integration unter Einbindung des Stadtsportausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O11",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2335,7 +2335,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O12",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2350,7 +2350,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1506",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["FPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ"],
       "contra": ["ÖVP"]
     },
@@ -2397,7 +2397,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und  Wohnbau ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "5O15",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=78",
     "meetingNo": 5,
@@ -2480,7 +2480,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1511",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS"],
       "contra": [null, "KPÖ"]
     },
@@ -2529,7 +2529,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1488",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ"],
       "contra": [null, "NEOS", "KPÖ"]
     },
@@ -2547,7 +2547,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1502",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "KPÖ"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["FPÖ", "ÖVP"]
     },
@@ -2556,7 +2556,7 @@
         "submitter": "SPÖ",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["SPÖ"],
           "withheld": ["ÖVP", null, "NEOS", "KPÖ"],
           "contra": ["FPÖ"]
         },
@@ -2641,7 +2641,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ"],
           "contra": [null, "NEOS", "KPÖ"]
         },
@@ -2651,7 +2651,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": [null, "NEOS", "KPÖ"]
         },
@@ -2790,7 +2790,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1558",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS"],
       "contra": [null, "KPÖ"]
     },
@@ -3065,7 +3065,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1581",
     "forwardTo": "Ausschuss für Kultur und Tourismus ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "6K2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=79",
     "meetingNo": 6,
@@ -3092,7 +3092,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1559",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "Die Grünen"],
       "withheld": ["ÖVP"],
       "contra": [null, "KPÖ"]
     },
@@ -3111,7 +3111,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "6K5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=79",
     "meetingNo": 6,
@@ -3421,7 +3421,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1567",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": [null, "NEOS", "KPÖ"]
     },
@@ -3488,7 +3488,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "6K26",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=79",
     "meetingNo": 6,
@@ -3517,7 +3517,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1605",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -3865,7 +3865,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1618",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -3897,7 +3897,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1609",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -3915,7 +3915,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1638",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "Die Grünen"],
       "withheld": ["ÖVP", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -4242,7 +4242,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1651",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -4352,7 +4352,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "8L4",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=81",
     "meetingNo": 8,
@@ -4368,7 +4368,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "8L5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=81",
     "meetingNo": 8,
@@ -4384,7 +4384,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Frauen, Umwelt, Naturschutz und Bildung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "8L6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=81",
     "meetingNo": 8,
@@ -4419,7 +4419,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau und dem Ausschuss für Soziales, Jugend, Familie, Integration und Sport ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "8L8",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=81",
     "meetingNo": 8,
@@ -4515,7 +4515,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1673",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["ÖVP", "Die Grünen", "NEOS"],
       "withheld": ["SPÖ", null],
       "contra": ["FPÖ"]
     },
@@ -4592,7 +4592,7 @@
     ],
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -4610,7 +4610,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1679",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -4628,7 +4628,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1676",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "ÖVP", "Die Grünen", "KPÖ"],
       "withheld": ["NEOS"],
       "contra": ["FPÖ"]
     },
@@ -4843,7 +4843,7 @@
     ],
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP", "Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -5194,7 +5194,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Kultur und Tourismus ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "9O2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=82",
     "meetingNo": 9,
@@ -5210,7 +5210,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "9O3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=82",
     "meetingNo": 9,
@@ -5242,7 +5242,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1745",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -5263,7 +5263,7 @@
         "submitter": "ÖVP",
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
           "withheld": ["KPÖ"],
           "contra": ["NEOS"]
         },
@@ -5285,7 +5285,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie, Integration und Sport ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "9O7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=82",
     "meetingNo": 9,
@@ -5320,7 +5320,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -5330,7 +5330,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -5450,7 +5450,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1755",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -5480,7 +5480,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -5498,7 +5498,7 @@
       {
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -5522,7 +5522,7 @@
         "title": ["1"],
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["FPÖ", "ÖVP", "Die Grünen"],
           "withheld": ["SPÖ", "KPÖ"],
           "contra": ["NEOS"]
         },
@@ -5532,7 +5532,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -5542,7 +5542,7 @@
         "title": ["3"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -5575,7 +5575,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ", "NEOS"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -5625,7 +5625,7 @@
         "submitter": "ÖVP",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ", "NEOS"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -5715,7 +5715,7 @@
         "title": ["3"],
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+          "pro": ["SPÖ", "FPÖ", "ÖVP"],
           "withheld": ["Die Grünen", "NEOS"],
           "contra": ["KPÖ"]
         },
@@ -5779,7 +5779,7 @@
         "title": ["9 - 11"],
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+          "pro": ["SPÖ", "FPÖ", "Die Grünen"],
           "withheld": ["ÖVP", "NEOS"],
           "contra": ["KPÖ"]
         },
@@ -5789,7 +5789,7 @@
         "title": ["1 - 8"],
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+          "pro": ["SPÖ", "FPÖ", "Die Grünen"],
           "withheld": ["ÖVP"],
           "contra": ["NEOS", "KPÖ"]
         },
@@ -5858,7 +5858,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1787",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -6028,7 +6028,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1784",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["KPÖ"],
       "contra": ["Die Grünen", "NEOS"]
     },
@@ -6176,7 +6176,7 @@
         "submitter": "SPÖ",
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["SPÖ", "FPÖ", "ÖVP"],
           "withheld": ["Die Grünen", "KPÖ"],
           "contra": ["NEOS"]
         },
@@ -6186,7 +6186,7 @@
         "submitter": "ÖVP",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ", "Die Grünen", "KPÖ"],
           "contra": ["NEOS"]
         },
@@ -6270,7 +6270,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1811",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["ÖVP"],
       "withheld": ["SPÖ", "FPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -6288,7 +6288,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1813",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["ÖVP"],
       "withheld": ["SPÖ", "FPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -6337,7 +6337,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "10H9",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=83",
     "meetingNo": 10,
@@ -6370,7 +6370,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Verfassung und Innovation ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "10H11",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=83",
     "meetingNo": 10,
@@ -6505,7 +6505,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1906",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["ÖVP", "KPÖ"]
     },
@@ -6514,7 +6514,7 @@
         "submitter": "Grünen",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["Die Grünen", "NEOS", "KPÖ"],
           "withheld": ["SPÖ", "FPÖ"],
           "contra": ["ÖVP"]
         },
@@ -6577,7 +6577,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1899",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -6663,7 +6663,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1840",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -6746,7 +6746,7 @@
         "submitter": "Grünen",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["Die Grünen", "KPÖ"],
           "withheld": ["SPÖ", "ÖVP", "NEOS"],
           "contra": ["FPÖ"]
         },
@@ -6879,7 +6879,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1836",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "NEOS"],
       "withheld": ["ÖVP", "Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -7228,7 +7228,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1874",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["ÖVP", "Die Grünen", "KPÖ"]
     },
@@ -7544,7 +7544,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1941",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -7582,7 +7582,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie, Integration und Sport und dem Verwaltungsausschuss Kinder- und Jugend-Services ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "13G5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=91",
     "meetingNo": 13,
@@ -7710,7 +7710,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1935",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -7795,7 +7795,7 @@
         "title": ["3"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -7968,7 +7968,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1974",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "NEOS"],
       "withheld": ["KPÖ"],
       "contra": ["ÖVP", "Die Grünen"]
     },
@@ -7986,7 +7986,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1973",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "NEOS"],
       "withheld": ["KPÖ"],
       "contra": ["ÖVP", "Die Grünen"]
     },
@@ -8216,7 +8216,7 @@
         "submitter": "ÖVP",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+          "pro": ["ÖVP"],
           "withheld": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
           "contra": ["Die Grünen"]
         },
@@ -8265,7 +8265,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1994",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -8285,7 +8285,7 @@
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -8556,7 +8556,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie, Integration und Sport ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "14J18",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=92",
     "meetingNo": 14,
@@ -8619,7 +8619,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=1996",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -8653,7 +8653,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2007",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["ÖVP"],
       "withheld": ["SPÖ", "FPÖ"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -8674,7 +8674,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["Die Grünen", "NEOS", "KPÖ"],
           "withheld": ["SPÖ", "FPÖ"],
           "contra": ["ÖVP"]
         },
@@ -8705,7 +8705,7 @@
     "forwardTo": "Stadtsenat ",
     "forward": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["NEOS"],
       "withheld": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -8724,7 +8724,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2036",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
       "withheld": ["NEOS"],
       "contra": ["KPÖ"]
     },
@@ -8861,7 +8861,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2076",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["ÖVP", "NEOS"],
       "withheld": ["SPÖ", "FPÖ"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -8870,7 +8870,7 @@
         "submitter": "SPÖ",
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "NEOS"],
+          "pro": ["SPÖ", "FPÖ"],
           "withheld": ["NEOS"],
           "contra": ["ÖVP", "Die Grünen", "KPÖ"]
         },
@@ -9005,7 +9005,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2046",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -9306,7 +9306,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Frauen, Umwelt, Naturschutz und Bildung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "15J5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=93",
     "meetingNo": 15,
@@ -9459,7 +9459,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2070",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["Die Grünen", "NEOS"],
       "withheld": ["SPÖ", "FPÖ", "ÖVP"],
       "contra": ["KPÖ"]
     },
@@ -9495,7 +9495,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau und dem Ausschuss für Frauen, Umwelt, Naturschutz und Bildung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "15J16",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=93",
     "meetingNo": 15,
@@ -9646,7 +9646,7 @@
         "title": ["6"],
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+          "pro": ["SPÖ", "FPÖ", "NEOS"],
           "withheld": ["ÖVP", "Die Grünen"],
           "contra": ["KPÖ"]
         },
@@ -9666,7 +9666,12 @@
     "index": 1,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2115",
     "extras": [
-      { "title": ["1"], "pass": true, "votes": {}, "type": "chapter" },
+      {
+        "title": ["1"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      },
       {
         "title": ["2"],
         "pass": true,
@@ -9998,7 +10003,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2126",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["Die Grünen", "NEOS", "KPÖ"],
       "contra": ["ÖVP"]
     },
@@ -10106,7 +10111,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2150",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": [null, "KPÖ"]
     },
@@ -10274,7 +10279,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2145",
     "forwardTo": "Finanzausschuss ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "16R13",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=94",
     "meetingNo": 16,
@@ -10416,7 +10421,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["FPÖ"],
           "withheld": ["SPÖ", "ÖVP", "NEOS"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -10426,7 +10431,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ", "NEOS"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -10447,7 +10452,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2137",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -10485,7 +10490,7 @@
     ],
     "pass": false,
     "votes": {
-      "pro": ["FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"]
     },
@@ -10541,7 +10546,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2142",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["FPÖ", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "Die Grünen"],
       "contra": ["ÖVP"]
     },
@@ -10638,7 +10643,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2242",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -11147,8 +11152,18 @@
         },
         "type": "change"
       },
-      { "title": ["2"], "pass": true, "votes": {}, "type": "chapter" },
-      { "title": ["3"], "pass": true, "votes": {}, "type": "chapter" }
+      {
+        "title": ["2"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      },
+      {
+        "title": ["3"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      }
     ],
     "id": "17N3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=95",
@@ -11164,7 +11179,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2224",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -11219,7 +11234,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "17N7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=95",
     "meetingNo": 17,
@@ -11255,7 +11270,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ"],
           "withheld": ["SPÖ", "ÖVP"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -11265,7 +11280,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -11274,7 +11289,7 @@
       {
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": ["FPÖ", "ÖVP"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "KPÖ"]
         },
@@ -11298,7 +11313,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ"],
+          "pro": [],
           "withheld": ["SPÖ", "FPÖ"],
           "contra": ["Die Grünen", "NEOS", "NEOS", "KPÖ"]
         },
@@ -11316,7 +11331,7 @@
       {
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ"],
+          "pro": ["FPÖ"],
           "withheld": ["SPÖ"],
           "contra": ["Die Grünen", "NEOS", "NEOS", "KPÖ"]
         },
@@ -11369,7 +11384,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2227",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "Die Grünen", "KPÖ"],
+      "pro": [],
       "withheld": ["SPÖ", "Die Grünen", "KPÖ"],
       "contra": ["FPÖ", "ÖVP", "NEOS"]
     },
@@ -11439,7 +11454,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2212",
     "forwardTo": "Ausschuss für Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "17N16",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=95",
     "meetingNo": 17,
@@ -11471,7 +11486,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2235",
     "forwardTo": "Finanzausschuss ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "17N18",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=95",
     "meetingNo": 17,
@@ -11522,7 +11537,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2228",
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "17N21",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=95",
     "meetingNo": 17,
@@ -11645,8 +11660,22 @@
     "index": 27,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2205",
     "extras": [
-      { "title": ["1"], "pass": false, "votes": {}, "type": "chapter" },
-      { "title": ["2"], "pass": false, "votes": {}, "type": "chapter" }
+      {
+        "title": ["1"],
+        "pass": false,
+        "votes": {
+          "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"]
+        },
+        "type": "chapter"
+      },
+      {
+        "title": ["2"],
+        "pass": false,
+        "votes": {
+          "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"]
+        },
+        "type": "chapter"
+      }
     ],
     "id": "17N27",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=95",
@@ -12273,7 +12302,7 @@
     "forwardTo": "Ausschuss für Liegenschaften und Integration ",
     "forward": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -12436,7 +12465,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2299",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "Die Grünen", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["NEOS"]
     },
@@ -12599,7 +12628,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2371",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -12651,7 +12680,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2356",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -12777,7 +12806,12 @@
         },
         "type": "chapter"
       },
-      { "title": ["3"], "pass": true, "votes": {}, "type": "chapter" }
+      {
+        "title": ["3"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      }
     ],
     "id": "19I3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=97",
@@ -12942,7 +12976,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2372",
     "pass": false,
     "votes": {
-      "pro": ["FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"]
     },
@@ -12960,7 +12994,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2374",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -13036,7 +13070,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2452",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -13195,7 +13229,7 @@
         "title": ["2"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+          "pro": ["SPÖ"],
           "withheld": ["FPÖ", "ÖVP", "Die Grünen", "NEOS"],
           "contra": ["KPÖ"]
         },
@@ -13205,13 +13239,18 @@
         "title": ["3"],
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
           "withheld": ["FPÖ"],
           "contra": ["ÖVP"]
         },
         "type": "chapter"
       },
-      { "title": ["4"], "pass": true, "votes": {}, "type": "chapter" },
+      {
+        "title": ["4"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      },
       {
         "submitter": "GRin Leitner-Rauchdobler ",
         "pass": false,
@@ -13276,7 +13315,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2460",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -13783,7 +13822,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2477",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -13854,7 +13893,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2473",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "20M6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=98",
     "meetingNo": 20,
@@ -13869,7 +13908,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2467",
     "forwardTo": "Ausschuss für Kultur und Tourismus ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "20M7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=98",
     "meetingNo": 20,
@@ -14932,7 +14971,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2569",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -15177,7 +15216,7 @@
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -15214,7 +15253,7 @@
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -15250,7 +15289,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2573",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -15286,8 +15325,18 @@
     "index": 7,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2579",
     "extras": [
-      { "title": ["1"], "pass": true, "votes": {}, "type": "chapter" },
-      { "title": ["2"], "pass": true, "votes": {}, "type": "chapter" }
+      {
+        "title": ["1"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      },
+      {
+        "title": ["2"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      }
     ],
     "id": "23J7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=102",
@@ -15393,7 +15442,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "23J13",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=102",
     "meetingNo": 23,
@@ -15428,7 +15477,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "23J15",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=102",
     "meetingNo": 23,
@@ -15487,7 +15536,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2589",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -15696,7 +15745,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2621",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -15909,7 +15958,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2635",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "extras": [
       {
         "title": ["2"],
@@ -15935,7 +15984,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2638",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -16034,7 +16083,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2625",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -16203,7 +16252,7 @@
         "submitter": "NEOS",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP"],
+          "pro": [],
           "withheld": ["SPÖ", "FPÖ", "ÖVP"],
           "contra": ["Die Grünen", null, "KPÖ"]
         },
@@ -16348,7 +16397,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2686",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": [null],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -16417,7 +16466,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2689",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -16573,7 +16622,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2666",
     "forwardTo": "Umweltausschuss ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "25J1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=104",
     "meetingNo": 25,
@@ -16589,7 +16638,7 @@
     "forwardTo": "Integrationsausschuss ",
     "forward": false,
     "votes": {
-      "pro": ["FPÖ", "ÖVP"],
+      "pro": ["FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"]
     },
@@ -16780,7 +16829,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2678",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS"],
+      "pro": ["Die Grünen", "NEOS"],
       "withheld": ["SPÖ", "FPÖ"],
       "contra": ["ÖVP", null]
     },
@@ -16799,7 +16848,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "25J14",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=104",
     "meetingNo": 25,
@@ -16963,7 +17012,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2720",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -16998,7 +17047,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2721",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -17365,7 +17414,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2737",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "FPÖ"],
       "contra": ["ÖVP"]
     },
@@ -17547,7 +17596,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2785",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -17593,7 +17642,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2772",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -17653,7 +17702,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2784",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -17747,7 +17796,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2771",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -17914,7 +17963,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2770",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -18033,7 +18082,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2796",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -18063,7 +18112,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2809",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["ÖVP"],
       "withheld": ["SPÖ", "FPÖ"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -18233,7 +18282,7 @@
     "index": 13,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2798",
     "pass": false,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
     "id": "27M13",
@@ -18298,7 +18347,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2844",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "KPÖ"],
       "withheld": ["NEOS"],
       "contra": ["ÖVP", "Die Grünen"]
     },
@@ -18330,7 +18379,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2830",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["Die Grünen"]
     },
@@ -18394,7 +18443,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2827",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS"]
     },
@@ -18454,7 +18503,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2841",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "KPÖ"],
       "withheld": ["ÖVP", "Die Grünen"],
       "contra": ["NEOS"]
     },
@@ -18489,7 +18538,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2831",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
+      "pro": ["KPÖ"],
       "withheld": ["SPÖ", "FPÖ", "ÖVP"],
       "contra": ["Die Grünen", "NEOS"]
     },
@@ -18660,7 +18709,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Kultur und Tourismus ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "28J1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=107",
     "meetingNo": 28,
@@ -18745,7 +18794,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Frauen, Umwelt, Naturschutz und Bildung und dem Ausschuss für Liegenschaften und Integration ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "28J6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=107",
     "meetingNo": 28,
@@ -18779,7 +18828,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2856",
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "28J8",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=107",
     "meetingNo": 28,
@@ -19059,7 +19108,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2929",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "Die Grünen"],
       "withheld": ["NEOS", "KPÖ"],
       "contra": ["ÖVP"]
     },
@@ -19206,7 +19255,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2880",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -19260,7 +19309,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2919",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "NEOS"],
       "withheld": ["ÖVP"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -19632,7 +19681,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie und Sport ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "29O4",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=108",
     "meetingNo": 29,
@@ -19727,7 +19776,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2941",
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "29O9",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=108",
     "meetingNo": 29,
@@ -19761,7 +19810,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2939",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -19779,7 +19828,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2932",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "29O12",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=108",
     "meetingNo": 29,
@@ -19856,7 +19905,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2944",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -19865,7 +19914,7 @@
         "submitter": "SPÖ",
         "pass": true,
         "votes": {
-          "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
           "withheld": ["ÖVP"],
           "contra": ["FPÖ"]
         },
@@ -19886,7 +19935,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2933",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["NEOS"],
       "withheld": ["SPÖ", "FPÖ", "ÖVP"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -20103,7 +20152,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2999",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["ÖVP", "NEOS"]
     },
@@ -20424,7 +20473,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2988",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "31K2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=110",
     "meetingNo": 31,
@@ -20458,7 +20507,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2996",
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie und Sport ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "31K4",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=110",
     "meetingNo": 31,
@@ -20508,7 +20557,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2991",
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "31K7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=110",
     "meetingNo": 31,
@@ -20523,7 +20572,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2992",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "31K8",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=110",
     "meetingNo": 31,
@@ -20554,7 +20603,7 @@
     "index": 10,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=2994",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "31K10",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=110",
     "meetingNo": 31,
@@ -20994,7 +21043,7 @@
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP", "KPÖ"],
       "contra": ["Die Grünen", "NEOS"]
     },
@@ -21260,7 +21309,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3040",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ"],
       "contra": ["FPÖ", "ÖVP"]
     },
@@ -21384,7 +21433,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3058",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -21436,7 +21485,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3069",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "ÖVP"],
       "withheld": ["SPÖ", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -21471,7 +21520,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3043",
     "pass": false,
     "votes": {
-      "pro": ["Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["NEOS"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["SPÖ", "FPÖ", "ÖVP"]
     },
@@ -21641,7 +21690,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3089",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -21808,7 +21857,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3110",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -21856,7 +21905,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Kultur und Tourismus ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "33L1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=112",
     "meetingNo": 33,
@@ -21872,7 +21921,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Liegenschaften und Integration und dem Ausschuss für Sicherheit, Gesundheit und Städtekontakte ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "33L2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=112",
     "meetingNo": 33,
@@ -21958,7 +22007,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "33L7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=112",
     "meetingNo": 33,
@@ -22304,7 +22353,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Liegenschaften und Intregration ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "34H2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=113",
     "meetingNo": 34,
@@ -22451,7 +22500,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3172",
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "34H11",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=113",
     "meetingNo": 34,
@@ -22624,7 +22673,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3167",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
       "withheld": ["Die Grünen"],
       "contra": ["ÖVP"]
     },
@@ -22921,7 +22970,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3213",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -23106,7 +23155,7 @@
         "title": ["1"],
         "pass": false,
         "votes": {
-          "pro": ["FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["FPÖ", "ÖVP", "NEOS"],
           "withheld": ["Die Grünen", "KPÖ"],
           "contra": ["SPÖ"]
         },
@@ -23137,7 +23186,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Sicherheit, Gesundheit und Städtekontakte und dem Ausschuss für Liegenschaften und Integraton ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "35M6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=114",
     "meetingNo": 35,
@@ -23219,7 +23268,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3235",
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "35M11",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=114",
     "meetingNo": 35,
@@ -23235,7 +23284,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau, dem Ausschuss für Finanzen, Innovation und Verfassung und dem Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "35M12",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=114",
     "meetingNo": 35,
@@ -23840,8 +23889,20 @@
     "index": 1,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3273",
     "extras": [
-      { "title": ["1 und 2"], "pass": true, "votes": {}, "type": "chapter" },
-      { "title": ["3 und 4"], "pass": false, "votes": {}, "type": "chapter" }
+      {
+        "title": ["1 und 2"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      },
+      {
+        "title": ["3 und 4"],
+        "pass": false,
+        "votes": {
+          "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"]
+        },
+        "type": "chapter"
+      }
     ],
     "id": "36J1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
@@ -23872,7 +23933,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -23905,7 +23966,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -23940,7 +24001,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -23956,7 +24017,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24029,7 +24090,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K10",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24045,7 +24106,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K11",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24068,7 +24129,12 @@
         },
         "type": "chapter"
       },
-      { "title": ["2"], "pass": true, "votes": {}, "type": "chapter" }
+      {
+        "title": ["2"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      }
     ],
     "forwardTo": "Stadtsenat  ",
     "forward": false,
@@ -24091,7 +24157,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K13",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24124,7 +24190,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K15",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24174,7 +24240,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K18",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24190,7 +24256,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K19",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24270,7 +24336,7 @@
     "pass": false,
     "forwardTo": "Stadtsenat ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "36K24",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=115",
     "meetingNo": 36,
@@ -24629,7 +24695,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3346",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["Die Grünen", "NEOS", "KPÖ"],
       "contra": ["ÖVP"]
     },
@@ -24695,7 +24761,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3357",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
       "withheld": ["Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -24713,7 +24779,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3336",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -24769,7 +24835,7 @@
     "index": 1,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3362",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "37J1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=116",
     "meetingNo": 37,
@@ -25467,7 +25533,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3465",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP", "Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -25485,7 +25551,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3432",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -25503,7 +25569,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3423",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -25643,7 +25709,7 @@
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": false,
     "votes": {
-      "pro": ["ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "KPÖ"],
       "withheld": ["ÖVP", "NEOS"],
       "contra": ["SPÖ", "FPÖ"]
     },
@@ -25698,7 +25764,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3452",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "38N9",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=117",
     "meetingNo": 38,
@@ -25766,7 +25832,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3439",
     "forwardTo": "Ausschuss für Liegenschaften und Integration ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "38N13",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=117",
     "meetingNo": 38,
@@ -26363,7 +26429,12 @@
     "index": 1,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3515",
     "extras": [
-      { "title": ["1"], "pass": true, "votes": {}, "type": "chapter" }
+      {
+        "title": ["1"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      }
     ],
     "id": "40H1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=119",
@@ -26379,7 +26450,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3514",
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung und dem Ausschuss für Sicherheit, Gesundheit und Städtekontakte ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "40H2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=119",
     "meetingNo": 40,
@@ -26394,7 +26465,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3509",
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau  ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "40H3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=119",
     "meetingNo": 40,
@@ -26608,7 +26679,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3546",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -26839,7 +26910,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3566",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "41L2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=120",
     "meetingNo": 41,
@@ -27014,7 +27085,7 @@
     "index": 12,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3577",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "41L12",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=120",
     "meetingNo": 41,
@@ -27275,10 +27346,7 @@
     "index": 10,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3642",
     "pass": false,
-    "votes": {
-      "pro": [],
-      "withheld": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"]
-    },
+    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "42C10",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=122",
     "meetingNo": 42,
@@ -27442,7 +27510,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3621",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -27713,7 +27781,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3651",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -27961,7 +28029,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3722",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -28010,7 +28078,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3706",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -28042,7 +28110,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3704",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -28304,7 +28372,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3709",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "KPÖ"],
       "withheld": ["ÖVP", "NEOS"],
       "contra": ["FPÖ"]
     },
@@ -28384,7 +28452,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3711",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -28525,7 +28593,7 @@
         "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung und zum Ausschuss für Sicherheit, Gesundheit und Städtekontakte mehrstimmig ",
         "forward": true,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+          "pro": ["SPÖ", "FPÖ"],
           "withheld": ["ÖVP", "NEOS"],
           "contra": ["Die Grünen", "KPÖ"]
         },
@@ -28583,7 +28651,7 @@
     "forwardTo": "Infrastrukturausschuss ",
     "forward": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -28772,7 +28840,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3730",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "43O16",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=123",
     "meetingNo": 43,
@@ -28786,7 +28854,12 @@
     "index": 17,
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3727",
     "extras": [
-      { "title": ["1"], "pass": true, "votes": {}, "type": "chapter" },
+      {
+        "title": ["1"],
+        "pass": true,
+        "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+        "type": "chapter"
+      },
       { "title": ["2"], "pass": false, "votes": {}, "type": "chapter" }
     ],
     "id": "43O17",
@@ -29042,7 +29115,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3796",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
       "withheld": ["KPÖ"],
       "contra": ["KPÖ"]
     },
@@ -29153,7 +29226,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3805",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP", "Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -29365,7 +29438,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3810",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -29504,7 +29577,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3822",
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "44N2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=124",
     "meetingNo": 44,
@@ -29519,7 +29592,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3821",
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "44N3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=124",
     "meetingNo": 44,
@@ -29619,7 +29692,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Liegenschaften und Integration ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "44N9",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=124",
     "meetingNo": 44,
@@ -29754,7 +29827,7 @@
     "forwardTo": "Stadtsenat ",
     "forward": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "NEOS"],
       "withheld": ["ÖVP", "Die Grünen"],
       "contra": ["KPÖ"]
     },
@@ -29802,7 +29875,7 @@
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie und Sport ",
     "forward": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -29963,7 +30036,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3837",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -29972,7 +30045,7 @@
         "submitter": "SPÖ",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+          "pro": ["SPÖ"],
           "withheld": ["ÖVP", "Die Grünen", "NEOS", "KPÖ"],
           "contra": ["FPÖ"]
         },
@@ -29993,7 +30066,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3818",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ"],
       "contra": ["FPÖ", "ÖVP"]
     },
@@ -30229,7 +30302,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "45I1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=125",
     "meetingNo": 45,
@@ -30244,7 +30317,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3888",
     "pass": false,
     "votes": {
-      "pro": ["FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ", "NEOS"],
       "withheld": ["ÖVP"],
       "contra": ["SPÖ", "Die Grünen", "KPÖ"]
     },
@@ -30305,7 +30378,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3882",
     "forwardTo": "Verwaltungsausschuss Kinder- und Jugend-Services und an den Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "45I5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=125",
     "meetingNo": 45,
@@ -30360,7 +30433,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3894",
     "forwardTo": "Ausschuss für Liegenschaften und Integration, an den Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau und an den Ausschuss für Soziales, Jugend, Familie und Sport ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "45I7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=125",
     "meetingNo": 45,
@@ -30375,7 +30448,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3896",
     "forwardTo": "Ausschuss für Liegenschaften und Integration ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "45I8",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=125",
     "meetingNo": 45,
@@ -30573,7 +30646,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3883",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "NEOS", "KPÖ"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "NEOS", "KPÖ"],
       "contra": ["ÖVP", "Die Grünen"]
     },
@@ -30592,7 +30665,7 @@
     "forwardTo": "Ausschuss für Sicherheit, Gesundheit und Städtekontake ",
     "forward": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
       "withheld": ["NEOS"],
       "contra": ["KPÖ"]
     },
@@ -31046,7 +31119,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3925",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -31104,7 +31177,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=3957",
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "46M1",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=126",
     "meetingNo": 46,
@@ -31168,7 +31241,7 @@
     "pass": false,
     "forwardTo": "Sozialausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "46M5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=126",
     "meetingNo": 46,
@@ -31365,7 +31438,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4004",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS"]
     },
@@ -31629,7 +31702,7 @@
     "pass": false,
     "forwardTo": "Infrastrukturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31645,7 +31718,7 @@
     "pass": false,
     "forwardTo": "Liegenschaftsausschuss und dem Kulturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31675,7 +31748,7 @@
     "pass": false,
     "forwardTo": "Sozialausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I5",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31691,7 +31764,7 @@
     "pass": false,
     "forwardTo": "Infrastrukturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I6",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31721,7 +31794,7 @@
     "pass": false,
     "forwardTo": "Infrastrukturausschuss und Liegenschaftsausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I8",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31737,7 +31810,7 @@
     "pass": false,
     "forwardTo": "Infrastrukturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I9",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31753,7 +31826,7 @@
     "pass": false,
     "forwardTo": "Liegenschaftsausschuss und dem Kulturausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I10",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31839,7 +31912,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "47I15",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=128",
     "meetingNo": 47,
@@ -31871,7 +31944,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4019",
     "pass": false,
     "votes": {
-      "pro": ["FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["NEOS"],
       "withheld": ["FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
       "contra": ["SPÖ"]
     },
@@ -31920,7 +31993,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4017",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS", "KPÖ"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS", "KPÖ"],
       "contra": ["Die Grünen"]
     },
@@ -32134,7 +32207,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4071",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -32152,7 +32225,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4069",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -32170,7 +32243,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4072",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "KPÖ"],
       "contra": ["NEOS"]
     },
@@ -32188,7 +32261,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4070",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS"]
     },
@@ -32403,7 +32476,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4091",
     "forwardTo": "Ausschuss für Kultur und Tourismus ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "48N3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=129",
     "meetingNo": 48,
@@ -32438,7 +32511,7 @@
     ],
     "forwardTo": "Infrastrukturausschuss ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "48N4",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=129",
     "meetingNo": 48,
@@ -32486,7 +32559,7 @@
     "pass": false,
     "forwardTo": "Umweltausschuss, dem Infrastrukturausschuss, dem Liegenschaftsausschuss und dem Wirtschaftsausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "48N7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=129",
     "meetingNo": 48,
@@ -32502,7 +32575,7 @@
     "pass": false,
     "forwardTo": "Finanzausschuss ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "48N8",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=129",
     "meetingNo": 48,
@@ -32641,7 +32714,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4087",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -32710,7 +32783,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4067",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -33085,7 +33158,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4141",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["ÖVP"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -33144,7 +33217,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M2",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33160,7 +33233,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M3",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33176,7 +33249,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Soziales, Jugend, Familie und Sport ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M4",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33229,7 +33302,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4161",
     "forwardTo": "Ausschuss für Frauen, Umwelt, Naturschutz und Bildung und an den Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M7",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33299,7 +33372,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4149",
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M10",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33334,7 +33407,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M12",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33350,7 +33423,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Wirtschaft, Märkte, Stadtgrün und Straßenbetreuung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M13",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33385,7 +33458,7 @@
     "pass": false,
     "forwardTo": "Ausschuss für Finanzen, Innovation und Verfassung ",
     "forward": true,
-    "votes": { "contra": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "49M15",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=130",
     "meetingNo": 49,
@@ -33431,7 +33504,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GPSearch/ResultDetail?TopId=4158",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["SPÖ", "Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["FPÖ"],
       "contra": ["ÖVP"]
     },
@@ -33623,7 +33696,7 @@
         "submitter": "FPÖ",
         "pass": false,
         "votes": {
-          "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
+          "pro": ["FPÖ"],
           "withheld": ["SPÖ", "ÖVP", "NEOS"],
           "contra": ["Die Grünen", "NEOS"]
         },
@@ -33661,7 +33734,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=131",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -33814,7 +33887,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=131",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen", "NEOS"],
       "contra": ["KPÖ"]
     },
@@ -33978,7 +34051,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=131",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "KPÖ"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS"]
     },
@@ -34253,7 +34326,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GetAnfrageAntrag?AnfrageAntragId=237",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "NEOS", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP"],
       "contra": ["FPÖ"]
     },
@@ -34383,7 +34456,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GetAnfrageAntrag?AnfrageAntragId=244",
     "forwardTo": "Ausschuss für Infrastruktur, Stadtentwicklung und Wohnbau ",
     "forward": true,
-    "votes": {},
+    "votes": { "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"] },
     "id": "50N20",
     "meetingUrl": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=131",
     "meetingNo": 50,
@@ -35017,7 +35090,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=132",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP"],
       "withheld": ["Die Grünen"],
       "contra": ["NEOS", "KPÖ"]
     },
@@ -35170,7 +35243,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=132",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["NEOS"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -35188,7 +35261,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=132",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["NEOS"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
@@ -35206,7 +35279,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GrDetail?GrId=132",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "KPÖ"],
+      "pro": ["SPÖ", "FPÖ", "ÖVP", "Die Grünen"],
       "withheld": ["KPÖ"],
       "contra": ["NEOS"]
     },
@@ -35470,7 +35543,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GetAnfrageAntrag?AnfrageAntragId=271",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+      "pro": ["Die Grünen", "KPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS"],
       "contra": ["FPÖ"]
     },
@@ -35548,7 +35621,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GetAnfrageAntrag?AnfrageAntragId=266",
     "pass": false,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP", "NEOS"],
+      "pro": ["FPÖ"],
       "withheld": ["SPÖ", "ÖVP", "NEOS"],
       "contra": ["Die Grünen", "KPÖ"]
     },
@@ -35566,7 +35639,7 @@
     "url": "https://www.linz.at/Politik/GRSitzungen/GrSitzungen/GetAnfrageAntrag?AnfrageAntragId=267",
     "pass": true,
     "votes": {
-      "pro": ["SPÖ", "FPÖ", "ÖVP"],
+      "pro": ["SPÖ", "FPÖ"],
       "withheld": ["NEOS"],
       "contra": ["Die Grünen", "NEOS", "KPÖ"]
     },
