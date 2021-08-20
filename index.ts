@@ -55,6 +55,7 @@ function makeMotions() {
       if (meetingNo > 51) return; //scraped data includes one meeting from period before
       const id =
         meetingNo + titleInfo.groups.agendaItem + titleInfo.groups.index;
+      
       const motion = maker.make(item);
 
       if (motion != undefined) {
@@ -65,6 +66,14 @@ function makeMotions() {
         motion.date = date;
         output.push(motion);
       }
+    }
+  });
+
+  fs.writeFile("./sentences.txt", maker.sentences, "utf8", (err) => {
+    if (err) {
+      console.log(`Error writing file: ${err}`);
+    } else {
+      console.log(`File is written successfully!`);
     }
   });
 }
