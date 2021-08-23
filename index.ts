@@ -1,75 +1,257 @@
 import * as fs from "fs";
 import * as json from "./repair.json";
-import { MotionMaker } from "./grClasses";
+import { Motion, VoteResult, DataItem } from "./types";
 
-let output = [];
-const agendas = {};
-const data = json["result"];
+function getTitleInfo(item: DataItem): RegExpMatchArray {
+  return [
+    ...item.antrag_titel.matchAll(
+      /^(?<agendaItem>[A-Z])(?<index>[0-9]+)\.\s(?<value>(.|\n)+)/gm
+    ),
+  ][0];
+}
 
-function makeMotions() {
-  const maker = new MotionMaker();
+function getMeetingDateAndNumber(item: DataItem): [Date, number] {
+  const dateRxMatches = [
+    ...item.sitzung.matchAll(
+      /(\d+)\.(?:\sGemeinderatssitzung\sam\s)(\d+)\.(\d+)\.(\d{4})(?:\sum\s)(\d+)/gm
+    ),
+  ];
+  let meetingNo: number = Array.isArray(dateRxMatches[0])
+    ? parseInt(dateRxMatches[0][1])
+    : 0;
+  if (meetingNo > 51) return undefined; //scraped data includes one meeting from period before
 
-  data.forEach((item) => {
-    const titleInfo = [
-      ...item.antrag_titel.matchAll(
-        /^(?<agendaItem>[A-Z])(?<index>[0-9]+)\.\s(?<value>(.|\n)+)/gm
-      ),
-    ][0];
-    if (titleInfo) {
-      const dateRxMatches = [
-        ...item.sitzung.matchAll(
-          /(\d+)\.(?:\sGemeinderatssitzung\sam\s)(\d+)\.(\d+)\.(\d{4})(?:\sum\s)(\d+)/gm
-        ),
-      ];
-      if (!dateRxMatches[0]) {
-        let debug = true;
-        debug;
+  let date = new Date(
+    parseInt(dateRxMatches[0][4]),
+    parseInt(dateRxMatches[0][3]),
+    parseInt(dateRxMatches[0][2]),
+    parseInt(dateRxMatches[0][5]),
+    0,
+    0,
+    0
+  );
+  return [date, meetingNo];
+}
+
+function getAgenda(item: DataItem): {} {
+  const agendaRxMatches = [
+    ...item.tagesordnung.matchAll(
+      /(?<index>[A-Z])\.\s*(?<value>[\wÄÖÜäöüß€§.,\-;\(\)"\/: ]+)/gm
+    ),
+  ];
+
+  let agenda = {};
+  agendaRxMatches.forEach((to) => {
+    agenda[to.groups.index] = to.groups.value;
+  });
+  return agenda;
+}
+
+function getVoteResults(item: DataItem) {
+  const result: string[] = item.antrag_ergebnisdetail.split("\n");
+  let voteResults = new Array<VoteResult>();
+  let currentSubject: string;
+  result.forEach((sentence) => {
+    let partialResult = analyzeSentence(sentence);
+    if (partialResult && typeof partialResult != "string") {
+      if ("subject" in partialResult && "action" in partialResult) {
+        voteResults.push({ subject: partialResult.subject });
+        currentSubject = partialResult.subject;
+      } else if ("vote" in partialResult) {
+        let index = voteResults.findIndex(
+          (value) => value.subject === currentSubject
+        );
+        if (index >= 0) {
+          voteResults[index][partialResult.vote] = partialResult.parties;
+        }
+      } else if ("subject" in partialResult && "pro" in partialResult) {
+        //this is the case for einstimmig angenommen, when analyzeSentence returns a VoteResult
+        voteResults.push(partialResult);
       }
-      let meetingNo: number = Array.isArray(dateRxMatches[0])
-        ? parseInt(dateRxMatches[0][1])
-        : 0;
-
-      let date = new Date(
-        parseInt(dateRxMatches[0][4]),
-        parseInt(dateRxMatches[0][3]),
-        parseInt(dateRxMatches[0][2]),
-        parseInt(dateRxMatches[0][5]),
-        0,
-        0,
-        0
+    } else if (partialResult && typeof partialResult == "string") {
+      let index = voteResults.findIndex(
+        (value) => value.subject === currentSubject
       );
-      let meetingUrl = item["web-scraper-start-url"];
+      if (index >= 0) {
+        voteResults[index]["meta"] = partialResult;
+      }
+    }
+  });
+  return voteResults;
+}
 
-      //regex agenda string
-      const agendaRxMatches = [
-        ...item.tagesordnung.matchAll(
-          /(?<index>[A-Z])\.\s*(?<value>[\wÄÖÜäöüß€§.,\-;\(\)"\/: ]+)/gm
+function analyzeSentence(sentence: string):
+  | string
+  | VoteResult
+  | { subject: string; action: string }
+  | {
+      vote: string;
+      parties: string[] | string[][];
+    } {
+  const match = [
+    ...sentence.matchAll(
+      /(?:D[erasi]*)?(?<thing>.*)(?:(?:wurde|wird)(?<action>.+(?=.))|(?:ist(?<attribute>.*)))/gm
+    ),
+  ][0];
+  if (match) {
+    if (match.groups.thing && match.groups.action) {
+      const result = {
+        subject: match.groups.thing.trim(),
+        action: match.groups.action.trim(),
+      };
+      if (result.action.includes("einstimmig")) {
+        let voteResult: VoteResult = {
+          subject: result.subject,
+          pro: ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+        };
+        if (result.action.includes("zugewiesen")) {
+          voteResult.meta = result.action;
+        }
+        return voteResult;
+      } else {
+        return result;
+      }
+    }
+  } else if (checkVoteInfo(sentence)) {
+    return countVotes(sentence);
+  } else {
+    return sentence;
+  }
+}
+
+function partyListToArray(list: string) {
+  const listToArray = list.split(",");
+  listToArray.forEach((entry) => {
+    if (entry.includes("und")) {
+      const entryToArray = entry.split("und");
+      entryToArray.forEach((value) => listToArray.push(value));
+      listToArray.splice(listToArray.indexOf(entry), 1);
+    }
+  });
+  return listToArray
+    .map((p) => {
+      if (p.includes("Grüne")) p = "Die Grünen";
+      const matches = [
+        ...p.matchAll(
+          /(?<delegate>(?:GRin|GR).*(?=\s\())?(?:\s\()?(?<party>S?K?F?PÖ|Die Grünen|ÖVP|NEOS|Neos)/gm
         ),
       ];
-      let agenda = {};
-      agendaRxMatches.forEach((to) => {
-        agenda[to.groups.index] = to.groups.value;
-      });
-      agendas[meetingNo] = agenda;
+      const groups = matches.length > 0 ? matches[0].groups : undefined;
+      if (groups && !groups.delegate) {
+        return groups.party;
+      } else if (groups && groups.party && groups.delegate) {
+        return [groups.party, groups.delegate];
+      } else if (groups && groups.delegate) {
+        return groups.delegate;
+      }
+    })
+    .filter((value) => value !== undefined);
+}
 
-      if (meetingNo > 51) return; //scraped data includes one meeting from period before
-      const id =
+function checkVoteInfo(sentence: string): boolean | undefined {
+  if (!sentence) return undefined;
+  return sentence.includes("nthaltung") || sentence.includes("Gegenstimme");
+}
+
+function countVotes(value: string): {
+  vote: string;
+  parties: string[] | string[][];
+} {
+  const match = [
+    ...value.matchAll(/(?<side>(?:St.*ung:\s?|Ge.*mme:\s?))(?<parties>.*)/gm),
+  ][0];
+  let result;
+  if (match)
+    if (match.groups.side.includes("nthaltung")) {
+      result = {
+        vote: "withheld",
+        parties: partyListToArray(match.groups.parties),
+      };
+    } else if (match.groups.side.includes("Gegen")) {
+      result = {
+        vote: "contra",
+        parties: partyListToArray(match.groups.parties),
+      };
+    } else {
+      console.log("Could not tally votes in string:" + value);
+    }
+  return result;
+}
+
+function main() {
+  let output = [];
+  const data = json["result"];
+  
+  data.forEach((item: DataItem) => {
+    //I realized that urgent motions weren't initially included in the scraped data,
+    //but adding those motions polluted the data with duplicates.
+    if (!item.antrag_berichterstatter || !item.antrag_ergebnisdetail) {
+      if (
+        item.dringlich_titel &&
+        item.dringlich_ergebnisdetail &&
+        item.dringlich_berichterstatter
+      ) {
+        item.antrag_berichterstatter = item.dringlich_berichterstatter;
+        item.antrag_ergebnisdetail = item.dringlich_ergebnisdetail;
+        item.antrag_titel = item.dringlich_titel;
+        if (item["dringlich_wortprotokoll-href"]) {
+          item["wortprotokoll-href"] = item["dringlich_wortprotokoll-href"];
+        }
+      } else {
+        return;
+      }
+    }
+
+    const titleInfo = getTitleInfo(item);
+
+    if (titleInfo) {
+      const motion = new Motion();
+      motion.title = titleInfo.groups.value;
+      let [date, meetingNo] = getMeetingDateAndNumber(item);
+      motion.id =
         meetingNo + titleInfo.groups.agendaItem + titleInfo.groups.index;
-      
-      const motion = maker.make(item);
+
+      let submitter = item.antrag_berichterstatter.match(
+        /S?K?F?PÖ|Die Grünen|ÖVP|NEOS|Grüne/gm
+      )
+        ? item.antrag_berichterstatter.match(
+            /S?K?F?PÖ|Die Grünen|ÖVP|NEOS|Grüne/gm
+          )[0]
+        : "";
+      if (submitter == "Grüne") submitter = "Die Grünen";
+      motion.submitter = submitter;
+      motion.url = item["wortprotokoll-href"] || item["web-scraper-start-url"];
+
+      const agenda = getAgenda(item);
+      motion.meta = {
+        date: date,
+        agendaText: agenda[titleInfo.groups.agendaItem],
+        meetingUrl: item["web-scraper-start-url"],
+        meetingNo: meetingNo,
+        index: parseInt(titleInfo.groups.index),
+        agendaItem: titleInfo.groups.agendaItem,
+      };
+
+      motion.votes = getVoteResults(item);
 
       if (motion != undefined) {
-        motion.id = id;
-        motion.meetingUrl = meetingUrl;
-        motion.meetingNo = meetingNo;
-        motion.agendaText = agendas[meetingNo][titleInfo.groups.agendaItem];
-        motion.date = date;
         output.push(motion);
       }
     }
   });
 
-  fs.writeFile("./sentences.txt", maker.sentences, "utf8", (err) => {
+  const sorted = output.sort((a, b) => {
+    const calcScore = (val) =>
+      val.meta.meetingNo * 10000 +
+      val.meta.agendaItem.charCodeAt(0) * 100 +
+      parseInt(val.meta.index);
+    const score = calcScore(a) - calcScore(b);
+    return score;
+  });
+
+  const outputString = JSON.stringify(sorted);
+
+  fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
     if (err) {
       console.log(`Error writing file: ${err}`);
     } else {
@@ -78,21 +260,4 @@ function makeMotions() {
   });
 }
 
-makeMotions();
-
-const sorted = output.sort((a, b) => {
-  const calcScore = (val) =>
-    val.meetingNo * 10000 + val.agendaItem.charCodeAt(0) * 100 + val.index;
-  const score = calcScore(a) - calcScore(b);
-  return score;
-});
-
-const outputString = JSON.stringify(sorted);
-
-fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
-  if (err) {
-    console.log(`Error writing file: ${err}`);
-  } else {
-    console.log(`File is written successfully!`);
-  }
-});
+main();
