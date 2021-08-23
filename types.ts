@@ -28,6 +28,13 @@ export class Motion {
   submitter: string;
   url: string;
   id: string;
-  meta: { date: Date; agendaText: string; meetingUrl: string, meetingNo: number, index: number, agendaItem: string};
+  meta: {
+    date: Date;
+    agendaText: string;
+    meetingUrl: string;
+    meetingNo: number;
+    index: number;
+    agendaItem: string;
+  };
   votes: VoteResult[];
 }
