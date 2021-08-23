@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import { URL } from "url";
 import * as json from "./repair.json";
 import { Motion, VoteResult, DataItem } from "./types";
 
@@ -181,7 +182,7 @@ function countVotes(value: string): {
 function main() {
   let output = [];
   const data = json["result"];
-  
+
   data.forEach((item: DataItem) => {
     //I realized that urgent motions weren't initially included in the scraped data,
     //but adding those motions polluted the data with duplicates.
@@ -205,7 +206,7 @@ function main() {
     const titleInfo = getTitleInfo(item);
 
     if (titleInfo) {
-      const motion = new Motion();
+      const motion = {} as Motion;
       motion.title = titleInfo.groups.value;
       let [date, meetingNo] = getMeetingDateAndNumber(item);
       motion.id =
@@ -220,13 +221,25 @@ function main() {
         : "";
       if (submitter == "Grüne") submitter = "Die Grünen";
       motion.submitter = submitter;
-      motion.url = item["wortprotokoll-href"] || item["web-scraper-start-url"];
+
+      let motionUrlId;
+      if (item["wortprotokoll-href"]) {
+        const searchParams = new URL(item["wortprotokoll-href"]).searchParams;
+        motionUrlId =
+          "TopId="+searchParams.get("TopId") || "AnfrageAntragId="+searchParams.get("AnfrageAntragId");
+      }
+
+      const meetingUrlId = "GrId="+new URL(
+        item["web-scraper-start-url"]
+      ).searchParams.get("GrId");
+
+      motion.url = motionUrlId || meetingUrlId;
 
       const agenda = getAgenda(item);
       motion.meta = {
         date: date,
         agendaText: agenda[titleInfo.groups.agendaItem],
-        meetingUrl: item["web-scraper-start-url"],
+        meetingUrl: meetingUrlId,
         meetingNo: meetingNo,
         index: parseInt(titleInfo.groups.index),
         agendaItem: titleInfo.groups.agendaItem,

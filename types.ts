@@ -1,12 +1,12 @@
-export interface VoteResult {
+export type VoteResult = {
   subject: string;
   meta?: string;
   pro?: (string | string[])[];
   withheld?: (string | string[])[];
   contra?: (string | string[])[];
-}
+};
 
-export interface DataItem {
+export type DataItem = {
   "web-scraper-order": string;
   "web-scraper-start-url": string;
   antrag_titel: string;
@@ -21,9 +21,9 @@ export interface DataItem {
   dringlich_ergebnisdetail: string;
   dringlich_wortprotokoll: string;
   "dringlich_wortprotokoll-href": string;
-}
+};
 
-export class Motion {
+export type Motion = {
   title: string;
   submitter: string;
   url: string;
@@ -37,4 +37,4 @@ export class Motion {
     agendaItem: string;
   };
   votes: VoteResult[];
-}
+};
