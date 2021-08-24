@@ -1,0 +1,66 @@
+<script lang="ts">
+	import Segment from './segment.svelte';
+	import { getColor, getPercent } from '$lib/partyfacts';
+	import proSVG from './static/pro.svg';
+	import contraSVG from './static/ontra.svg';
+
+	export let parties;
+	export let type = 'pro';
+
+	const meta = {
+		pro: { text: 'Stimmen dafür: ', bg: proSVG },
+		contra: { text: 'Gegenstimmen: ', bg: contraSVG },
+		withheld: { text: 'Enthaltungen: ', bg: contraSVG }
+	};
+
+	let segments, offset;
+
+	$: if (parties) {
+		segments = [];
+		offset = 25;
+		for (let party of parties) {
+			segments.push({
+				color: getColor(party),
+				percent: getPercent(party),
+				offset: offset
+			});
+			offset -= getPercent(party);
+		}
+	}
+</script>
+
+<svg width="100%" height="100%" viewBox="0 0 42 42">
+	{#if parties && parties.length > 0}
+		<title>{meta[type].text + parties.join()}</title>
+	{/if}
+	<defs>
+		<clipPath id="clip-path-circle">
+			<circle cx="21" cy="21" r="17" />
+		</clipPath>
+	</defs>
+	<image width="90%" height="90%" x="5%" y="5%" href={meta[type].bg} />
+	{#if type === 'withheld'}
+		<image
+			width="90%"
+			height="90%"
+			x="5%"
+			y="5%"
+			transform="rotate(90, 21,21)"
+			href={meta[type].bg}
+		/>
+	{/if}
+	<g clip-path="url(#clip-path-circle)">
+		{#if parties && parties.length > 0}
+			{#each segments as segment}
+				<Segment percent={segment['percent']} color={segment['color']} offset={segment['offset']} />
+			{/each}
+		{/if}
+	</g>
+</svg>
+
+<style>
+	svg {
+		position: absolute;
+		z-index: 10;
+	}
+</style>
