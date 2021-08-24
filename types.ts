@@ -1,7 +1,7 @@
 export type VoteResult = {
   subject: string;
   meta?: string;
-  pro?: (string | string[])[];
+  pro?: boolean; //indicates "einstimmig angenommen"
   withheld?: (string | string[])[];
   contra?: (string | string[])[];
 };

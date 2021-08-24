@@ -103,7 +103,7 @@ function analyzeSentence(sentence: string):
       if (result.action.includes("einstimmig")) {
         let voteResult: VoteResult = {
           subject: result.subject,
-          pro: ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"],
+          pro: true,
         };
         if (result.action.includes("zugewiesen")) {
           voteResult.meta = result.action;
