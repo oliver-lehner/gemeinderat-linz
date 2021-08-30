@@ -1,7 +1,7 @@
 export type VoteResult = {
   subject: string;
-  meta?: string;
-  pro?: boolean; //indicates "einstimmig angenommen"
+  meta?: string[];
+  passed?: boolean;
   withheld?: (string | string[])[];
   contra?: (string | string[])[];
 };
@@ -29,7 +29,7 @@ export type Motion = {
   url: string;
   id: string;
   meta: {
-    date: Date;
+    date: string;
     agendaText: string;
     meetingUrl: string;
     meetingNo: number;

@@ -7,7 +7,10 @@ const partyFacts = {
 	KPÖ: { color: '--kpoe-color', percent: 1.64 }
 };
 
-export function getColor(party: string): string {
+export function getColor(party: string | string[]): string {
+	if (Array.isArray(party)){
+		party = party[0]
+	}
 	if (party && (partyFacts[party] || partyFacts[(party = party.toUpperCase())])) {
 		return partyFacts[party].color;
 	} else if (party && party.includes('Grün')) {
@@ -17,7 +20,10 @@ export function getColor(party: string): string {
 	}
 }
 
-export function getPercent(party: string): number {
+export function getPercent(party: string | string[]): number {
+	if (Array.isArray(party)){
+		party = party[0]
+	}
 	if (party && (partyFacts[party] || partyFacts[(party = party.toUpperCase())])) {
 		return partyFacts[party].percent;
 	} else if (party && party.includes('Grün')) {

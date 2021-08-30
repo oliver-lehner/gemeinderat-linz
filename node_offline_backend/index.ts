@@ -48,7 +48,7 @@ function getAgenda(item: DataItem): {} {
   return agenda;
 }
 
-function getVoteResults(item: DataItem) {
+function getVoteResults(item: DataItem):VoteResult[] {
   const result: string[] = item.antrag_ergebnisdetail.split("\n");
   let voteResults = new Array<VoteResult>();
   let currentSubject: string;
@@ -56,7 +56,8 @@ function getVoteResults(item: DataItem) {
     let partialResult = analyzeSentence(sentence);
     if (partialResult && typeof partialResult != "string") {
       if ("subject" in partialResult && "action" in partialResult) {
-        voteResults.push({ subject: partialResult.subject });
+        let passed = partialResult.action.includes("angenommen");
+        voteResults.push({ subject: partialResult.subject, passed: passed, meta: [partialResult.action]});
         currentSubject = partialResult.subject;
       } else if ("vote" in partialResult) {
         let index = voteResults.findIndex(
@@ -65,16 +66,22 @@ function getVoteResults(item: DataItem) {
         if (index >= 0) {
           voteResults[index][partialResult.vote] = partialResult.parties;
         }
-      } else if ("subject" in partialResult && "pro" in partialResult) {
+      } else if ("subject" in partialResult && "passed" in partialResult) {
         //this is the case for einstimmig angenommen, when analyzeSentence returns a VoteResult
         voteResults.push(partialResult);
       }
     } else if (partialResult && typeof partialResult == "string") {
+      //sentences that are neither subject/action or vote results become meta info
       let index = voteResults.findIndex(
         (value) => value.subject === currentSubject
       );
       if (index >= 0) {
-        voteResults[index]["meta"] = partialResult;
+      if(Array.isArray(voteResults[index]["meta"])){
+        voteResults[index]["meta"].push(partialResult);
+      } else {
+        voteResults[index]["meta"] = [partialResult];
+      }
+        
       }
     }
   });
@@ -103,11 +110,9 @@ function analyzeSentence(sentence: string):
       if (result.action.includes("einstimmig")) {
         let voteResult: VoteResult = {
           subject: result.subject,
-          pro: true,
+          meta: [result.action],
+          passed: true,
         };
-        if (result.action.includes("zugewiesen")) {
-          voteResult.meta = result.action;
-        }
         return voteResult;
       } else {
         return result;
@@ -159,7 +164,7 @@ function countVotes(value: string): {
   parties: string[] | string[][];
 } {
   const match = [
-    ...value.matchAll(/(?<side>(?:St.*ung:\s?|Ge.*mme:\s?))(?<parties>.*)/gm),
+    ...value.matchAll(/(?<side>(?:.*nthaltung:\s?|Ge.*mme:\s?))(?<parties>.*)/gm),
   ][0];
   let result;
   if (match)
@@ -237,7 +242,7 @@ function main() {
 
       const agenda = getAgenda(item);
       motion.meta = {
-        date: date,
+        date: date.toISOString(),
         agendaText: agenda[titleInfo.groups.agendaItem],
         meetingUrl: meetingUrlId,
         meetingNo: meetingNo,

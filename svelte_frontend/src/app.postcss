@@ -1,0 +1,28 @@
+@tailwind base;
+
+/* Write your global styles here, in PostCSS syntax */
+
+:root {
+	--spoe-color: #d52e27;
+	--fpoe-color: #0d61aa;
+	--oevp-color: #221f1f;
+	--gruen-color: #1db14b;
+	--neos-color: #e33c95;
+	--kpoe-color: #891820;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-sm font-bold
+  }
+}
+
+@tailwind components;
+
+@tailwind utilities

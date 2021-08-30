@@ -2,9 +2,9 @@
 	import Segment from './segment.svelte';
 	import { getColor, getPercent } from '$lib/partyfacts';
 	import proSVG from './static/pro.svg';
-	import contraSVG from './static/ontra.svg';
+	import contraSVG from './static/contra.svg';
 
-	export let parties;
+	export let parties: (string | string[])[];
 	export let type = 'pro';
 
 	const meta = {
@@ -61,6 +61,6 @@
 <style>
 	svg {
 		position: absolute;
-		z-index: 10;
+		z-index: 30;
 	}
 </style>
