@@ -3,7 +3,6 @@
 </script>
 
 <circle
-	id={"pie-segment"}
 	cx="21"
 	cy="21"
 	r="15.91549430918954"

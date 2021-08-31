@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import { displayData } from '$lib/stores';
+import { displayData, resetDisplayData } from '$lib/stores';
 import type { Motion } from '$lib/types';
 
 let data: Motion[];
@@ -27,6 +27,14 @@ const options = {
 const fuse = new Fuse(data, options);
 
 export function search(term: string) {
-	const result = fuse.search(term);
-	displayData.update(()=> result.map(value => value.item))
+	if (term.length > 0) {
+		const result = fuse.search(term);
+		displayData.update(() => result.map((value) => value.item));
+	}
 }
+
+export function reset(){
+	resetDisplayData();
+}
+
+

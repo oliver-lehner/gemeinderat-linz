@@ -48,7 +48,7 @@ function getAgenda(item: DataItem): {} {
   return agenda;
 }
 
-function getVoteResults(item: DataItem):VoteResult[] {
+function getVoteResults(item: DataItem): VoteResult[] {
   const result: string[] = item.antrag_ergebnisdetail.split("\n");
   let voteResults = new Array<VoteResult>();
   let currentSubject: string;
@@ -57,7 +57,11 @@ function getVoteResults(item: DataItem):VoteResult[] {
     if (partialResult && typeof partialResult != "string") {
       if ("subject" in partialResult && "action" in partialResult) {
         let passed = partialResult.action.includes("angenommen");
-        voteResults.push({ subject: partialResult.subject, passed: passed, meta: [partialResult.action]});
+        voteResults.push({
+          subject: partialResult.subject,
+          passed: passed,
+          meta: [partialResult.action],
+        });
         currentSubject = partialResult.subject;
       } else if ("vote" in partialResult) {
         let index = voteResults.findIndex(
@@ -76,12 +80,11 @@ function getVoteResults(item: DataItem):VoteResult[] {
         (value) => value.subject === currentSubject
       );
       if (index >= 0) {
-      if(Array.isArray(voteResults[index]["meta"])){
-        voteResults[index]["meta"].push(partialResult);
-      } else {
-        voteResults[index]["meta"] = [partialResult];
-      }
-        
+        if (Array.isArray(voteResults[index]["meta"])) {
+          voteResults[index]["meta"].push(partialResult);
+        } else {
+          voteResults[index]["meta"] = [partialResult];
+        }
       }
     }
   });
@@ -147,8 +150,6 @@ function partyListToArray(list: string) {
         return groups.party;
       } else if (groups && groups.party && groups.delegate) {
         return [groups.party, groups.delegate];
-      } else if (groups && groups.delegate) {
-        return groups.delegate;
       }
     })
     .filter((value) => value !== undefined);
@@ -164,7 +165,9 @@ function countVotes(value: string): {
   parties: string[] | string[][];
 } {
   const match = [
-    ...value.matchAll(/(?<side>(?:.*nthaltung:\s?|Ge.*mme:\s?))(?<parties>.*)/gm),
+    ...value.matchAll(
+      /(?<side>(?:.*nthaltung:\s?|Ge.*mme:\s?))(?<parties>.*)/gm
+    ),
   ][0];
   let result;
   if (match)
@@ -230,13 +233,17 @@ function main() {
       let motionUrlId;
       if (item["wortprotokoll-href"]) {
         const searchParams = new URL(item["wortprotokoll-href"]).searchParams;
-        motionUrlId =
-          "TopId="+searchParams.get("TopId") || "AnfrageAntragId="+searchParams.get("AnfrageAntragId");
+        if (searchParams.get("TopId")) {
+          motionUrlId = "TopId=" + searchParams.get("TopId");
+        } else if (searchParams.get("AnfrageAntragId")) {
+          motionUrlId =
+            "AnfrageAntragId=" + searchParams.get("AnfrageAntragId");
+        }
       }
 
-      const meetingUrlId = "GrId="+new URL(
-        item["web-scraper-start-url"]
-      ).searchParams.get("GrId");
+      const meetingUrlId =
+        "GrId=" +
+        new URL(item["web-scraper-start-url"]).searchParams.get("GrId");
 
       motion.url = motionUrlId || meetingUrlId;
 

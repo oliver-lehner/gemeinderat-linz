@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Segment from './segment.svelte';
-	import { getColor, getPercent } from '$lib/partyfacts';
+	import { getPartyFacts } from '$lib/partyfacts';
 	import proSVG from './static/pro.svg';
 	import contraSVG from './static/contra.svg';
 
-	export let parties: (string | string[])[];
+	export let parties: (string | string[] | (string | number)[])[];
 	export let type = 'pro';
 
 	const meta = {
@@ -19,14 +19,17 @@
 		segments = [];
 		offset = 25;
 		for (let party of parties) {
+			const { color, percent } = getPartyFacts(party);
 			segments.push({
-				color: getColor(party),
-				percent: getPercent(party),
+				color: color,
+				percent: percent,
 				offset: offset
 			});
-			offset -= getPercent(party);
+			offset -= percent;
 		}
 	}
+
+	//filter.update(()=>[type, parties]
 </script>
 
 <svg width="100%" height="100%" viewBox="0 0 42 42">
