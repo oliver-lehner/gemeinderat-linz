@@ -26,7 +26,7 @@ const config = {
 			currentcolor: 'currentcolor'
 		}
 	},
-	plugins: [require('@tailwindcss/line-clamp')]
+	plugins: [require('@tailwindcss/line-clamp'), require('tailwindcss-hyphens')]
 };
 
 module.exports = config;

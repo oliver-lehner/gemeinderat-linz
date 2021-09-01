@@ -36,11 +36,9 @@
 	{#if parties && parties.length > 0}
 		<title>{meta[type].text + parties.join()}</title>
 	{/if}
-	<defs>
 		<clipPath id="clip-path-circle">
 			<circle cx="21" cy="21" r="17" />
 		</clipPath>
-	</defs>
 	<image width="90%" height="90%" x="5%" y="5%" href={meta[type].bg} />
 	{#if type === 'withheld'}
 		<image

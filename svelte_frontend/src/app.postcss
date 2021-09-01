@@ -11,12 +11,18 @@
 	--kpoe-color: #891820;
 }
 
+
+
 @layer base {
+  body {
+    @apply bg-gray-800;
+}
+
   h1 {
     @apply text-2xl;
   }
   h2 {
-    @apply text-lg leading-6 text-gray-200 font-semibold;
+    @apply text-base leading-4 text-gray-200 font-semibold break-words;
   }
   h3 {
     @apply text-sm font-bold

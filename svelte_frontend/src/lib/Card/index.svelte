@@ -25,21 +25,21 @@
 
 	function getTextColorForAgendaItem(item: string): string {
 		const colors = [
-			'text-rose-300',
-			'text-pink-300',
-			'text-purple-300',
-			'text-indigo-300',
-			'text-blue-300',
-			'text-sky-300',
-			'text-cyan-300',
-			'text-teal-300',
-			'text-emerald-300',
-			'text-green-300',
-			'text-lime-300',
-			'text-yellow-300',
-			'text-amber-300',
-			'text-orange-300',
-			'text-red-300',
+			'bg-rose-300',
+			'bg-pink-300',
+			'bg-purple-300',
+			'bg-indigo-300',
+			'bg-blue-300',
+			'bg-sky-300',
+			'bg-cyan-300',
+			'bg-teal-300',
+			'bg-emerald-300',
+			'bg-green-300',
+			'bg-lime-300',
+			'bg-yellow-300',
+			'bg-amber-300',
+			'bg-orange-300',
+			'bg-red-300'
 		];
 		const idx = item.charCodeAt(0);
 		return colors[idx - 66];
@@ -48,24 +48,24 @@
 
 {#if motion}
 	<div
-		class="m-2 p-4 flex flex-col bg-gray-700 ring-1 ring-gray-300 rounded shadow-lg
+		class="m-1 p-2 sm:m-2 sm:p-4 flex flex-col bg-gray-700 ring-1 ring-gray-300 rounded shadow-lg
 {expanded ? 'row-span-2' : ''}"
 	>
-		<div class=" bg-gray-300 -mx-4 -mt-4 px-4 py-1 text-sm rounded-t">
-			{`Sitzung #${motion.meta.meetingNo} am ${new Date(motion.meta.date).toLocaleDateString(
-				'de-AT'
-			)} `}
+		<div class="bg-gray-300 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 h-10 text-sm leading-4 rounded-t flex flex-row shadow-md hyphens-auto">
+			<div class="w-1/3 pl-2 sm:pl-4 pt-1">
+				<p>{`#${motion.meta.meetingNo}`} <br> {`${new Date(motion.meta.date).toLocaleDateString('de-AT')} `}</p>
+			</div>
+			<div
+				class="w-2/3 pr-4 pl-1 py-1 {getTextColorForAgendaItem(
+					motion.meta.agendaItem
+				)}"
+			>
+				<p class="line-clamp-2 text-gray-600 ">{motion.meta.agendaText}</p>
+			</div>
 		</div>
-		<div
-			class=" {getTextColorForAgendaItem(
-				motion.meta.agendaItem
-			)} -mx-4 px-4 pt-1 text-xs text-color line-clamp-2"
-		>
-			{motion.meta.agendaText}
-		</div>
-		<div class="line-clamp-4 h-24 my-2">
+		<div class="line-clamp-6 h-24 my-2">
 			<a href={buildUrl(motion.url)}
-				><h2 class="hover:text-blue-200 active:text-blue-300">{motion.title}</h2></a
+				><h2 class="hover:text-blue-200 active:text-blue-300 hyphens-auto">{motion.title}</h2></a
 			>
 		</div>
 		<div class="relative {expanded ? 'grid grid-cols-1 gap-2' : ''}">
