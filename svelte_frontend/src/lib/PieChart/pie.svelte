@@ -32,7 +32,7 @@
 	//filter.update(()=>[type, parties]
 </script>
 
-<svg width="100%" height="100%" viewBox="0 0 42 42">
+<svg viewBox="0 0 42 42">
 	{#if parties && parties.length > 0}
 		<title>{meta[type].text + parties.join()}</title>
 	{/if}

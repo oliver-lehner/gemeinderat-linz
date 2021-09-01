@@ -10,15 +10,15 @@
 	$: chartColor = getPartyFacts(submitter).color || '--accent-color';
 
 	$: ({ contra, withheld } = vote);
-	/* 	$: pro = ['SPÖ', 'FPÖ', 'ÖVP', 'Die Grünen', 'NEOS', 'KPÖ'].filter((value) => {
+
+	$: pro = ['SPÖ', 'FPÖ', 'ÖVP', 'Die Grünen', 'NEOS', 'KPÖ']
+		//this function was 3 lines long before NEOS and their splits came along
+		/* 	
 		if(Array.isArray(value)){
 			return !(contra && contra.includes(value[0]) || withheld && withheld.includes(value[0]));
 		}
 		return !(contra && contra.includes(value) || withheld && withheld.includes(value));
-	}); */
-
-	$: pro = ['SPÖ', 'FPÖ', 'ÖVP', 'Die Grünen', 'NEOS', 'KPÖ']
-	//this function was 3 lines long before NEOS and their splits came along
+ 		*/
 		.map((party) => {
 			const contraIdx = contra
 				? contra.findIndex((cParty) =>
@@ -32,7 +32,6 @@
 				: undefined;
 			let proCount = getPartyFacts(party).delegates;
 			if (contraIdx >= 0 && Array.isArray(contra[contraIdx])) {
-				console.table([withheldIdx, contraIdx, proCount]);
 				proCount -=
 					contra.reduce(
 						(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),

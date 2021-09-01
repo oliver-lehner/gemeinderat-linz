@@ -24,6 +24,11 @@ const config = {
 			white: colors.white,
 			transparent: 'transparent',
 			currentcolor: 'currentcolor'
+		},
+		minHeight: {
+			0: '0',
+			12: '3rem',
+			full: '100%'
 		}
 	},
 	plugins: [require('@tailwindcss/line-clamp'), require('tailwindcss-hyphens')]

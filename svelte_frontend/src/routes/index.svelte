@@ -8,7 +8,6 @@
 </script>
 
 {#if $displayData}
-	<div class="h-screen container mx-auto relative mt-20 sm:mt-10">
     <VirtualList items={$displayDataItems} let:item bind:start bind:end>
       <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-2">
         {#each Array(12) as _, i}
@@ -18,6 +17,5 @@
         {/each}
       </div>
     </VirtualList>
-	</div>
 {/if}
 
