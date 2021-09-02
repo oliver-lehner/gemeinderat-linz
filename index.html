@@ -10,19 +10,19 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-e917e90a.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-bf602216.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-6e90c77c.js">
-		<link rel="modulepreload" href="/_app/chunks/stores-c53409c4.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-7caac3b5.js">
-		<link rel="modulepreload" href="/_app/chunks/index-bd6830ca.js">
+		<link rel="modulepreload" href="/_app/start-9e1bcdd7.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-ab132fd2.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-39a03535.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-9a399f51.js">
+		<link rel="modulepreload" href="/_app/pages/index.svelte-d7940f07.js">
+		<link rel="modulepreload" href="/_app/chunks/index-3a25f24c.js">
 		<link rel="stylesheet" href="/_app/assets/start-464e9d0a.css">
 		<link rel="stylesheet" href="/_app/assets/vendor-1d0ff75f.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-bb8025af.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-6909043c.css">
 		<link rel="stylesheet" href="/_app/assets/index-7fef6c50.css">
 
 		<script type="module">
-			import { start } from "/_app/start-e917e90a.js";
+			import { start } from "/_app/start-9e1bcdd7.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -35,8 +35,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-6e90c77c.js"),
-						import("/_app/pages/index.svelte-7caac3b5.js")
+						import("/_app/pages/__layout.svelte-39a03535.js"),
+						import("/_app/pages/index.svelte-d7940f07.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -52,11 +52,13 @@
 		<div id="svelte">
 
 
-<header><div class="w-full py-2 px-4 h-18 sm:h-10 z-50 fixed top-0 bg-gray-700 flex flex-col sm:items-center sm:flex-row"><h1 class="flex-1 text-xl font-bold text-gray-100">Gemeinderat Linz 2015 – 2021</h1>
-	<div class="flex-0"></div>
-	<div class="flex flex-row items-center content-between text-pink-100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.5 598.5" class="w-5 h-5 -ml-1 mr-2 fill-current"><g data-name="Layer 1" fill="current"><path d="M462.7 224.2a93 93 0 01-175 44 104.2 104.2 0 10126-126 93 93 0 0149 82z"></path><path d="M531.9 66.6A227.5 227.5 0 00210 388.4 227.5 227.5 0 00532 66.6zm-13 304a209.5 209.5 0 01-292.1 4.1l41.5-41.5a147 147 0 01-44.8-105.7C223.5 146.2 289.7 80 371 80a147 147 0 01105.7 44.8L523 78.5a209.5 209.5 0 01-4.1 292.1z"></path><path d="M211.9 390.1L18 584a34.6 34.6 0 010-49l171-171-4.7-6.4L11.7 530.2a40 40 0 1056.6 56.6l172.6-172.6a230.3 230.3 0 01-29-24.1z"></path><circle cx="421" cy="277.5" r="50"></circle><circle cx="309.5" cy="223" r="21.5"></circle></g></svg>
+<header><div class="w-full flex flex-col px-4 py-2 fixed top-0 z-50 bg-gray-600"><h1>Linzer Gemeinderat 2015-2021</h1>
+	<div class="flex flex-col sm:flew-row gap-y-2"><div class="flex flex-row items-center content-between text-pink-100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.5 598.5" class="w-5 h-5 -ml-1 mr-2 fill-current"><g data-name="Layer 1" fill="current"><path d="M462.7 224.2a93 93 0 01-175 44 104.2 104.2 0 10126-126 93 93 0 0149 82z"></path><path d="M531.9 66.6A227.5 227.5 0 00210 388.4 227.5 227.5 0 00532 66.6zm-13 304a209.5 209.5 0 01-292.1 4.1l41.5-41.5a147 147 0 01-44.8-105.7C223.5 146.2 289.7 80 371 80a147 147 0 01105.7 44.8L523 78.5a209.5 209.5 0 01-4.1 292.1z"></path><path d="M211.9 390.1L18 584a34.6 34.6 0 010-49l171-171-4.7-6.4L11.7 530.2a40 40 0 1056.6 56.6l172.6-172.6a230.3 230.3 0 01-29-24.1z"></path><circle cx="421" cy="277.5" r="50"></circle><circle cx="309.5" cy="223" r="21.5"></circle></g></svg>
 	<div class="px-1 mr-1 flex-grow-0 focus-within:rounded focus-within:bg-gray-300 focus-within:text-gray-700"><input class="w-full border-b-2 focus:rounded bg-transparent outline-none text-l" value=""></div>
-		<button class="text-2xl leading-3 text-red-500 invisible">×</button></div></div></header>
+		<button class="text-2xl leading-3 text-red-500 invisible">×</button></div>
+		<nav><ul class="flex flex-row text-l font-semibold gap-4"><li class="text-yellow-300"><a sveltekit:prefetch href="/">Anträge</a></li>
+		<li class="text-gray-100"><a sveltekit:prefetch href="/help">Hilfe &amp; Infos</a></li></ul>
+	<ul></ul></nav></div></div></header>
 <main class="bg-gray-800"><div class="h-screen container mx-auto relative mt-20 sm:mt-10"><svelte-virtual-list-viewport style="height: 100%;" class="svelte-1kdxoed"><svelte-virtual-list-contents style="padding-top: 0px; padding-bottom: 0px;" class="svelte-1kdxoed"></svelte-virtual-list-contents></svelte-virtual-list-viewport></div></main>
 
 
