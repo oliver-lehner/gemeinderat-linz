@@ -4,6 +4,7 @@
 	import { fade, fly } from 'svelte/transition';
 
 	export let motion: Motion;
+	export let xs:boolean = false;
 	let charts: Element;
 	let expanded = false;
 
@@ -51,30 +52,31 @@
 		class="m-1 p-2 sm:m-2 sm:p-4 flex flex-col bg-gray-700 ring-1 ring-gray-300 rounded shadow-lg
 {expanded ? 'row-span-2' : ''}"
 	>
-		<div class="bg-gray-300 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 h-10 text-sm leading-4 rounded-t flex flex-row shadow-md hyphens-auto">
-			<div class="w-1/3 pl-2 sm:pl-4 pt-1">
-				<p>{`#${motion.meta.meetingNo}`} <br> {`${new Date(motion.meta.date).toLocaleDateString('de-AT')} `}</p>
+		<div
+			class="bg-gray-300 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 sm:h-10 text-sm leading-4 rounded-t flex flex-col sm:flex-row shadow-md hyphens-auto"
+		>
+			<div class="w-1/3 pl-2 sm:pl-4 pt-1 whitespace-nowrap sm:whitespace-normal">
+				<p>
+					{`#${motion.meta.meetingNo}`}
+					{`${new Date(motion.meta.date).toLocaleDateString('de-AT')} `}
+				</p>
 			</div>
-			<div
-				class="w-2/3 pr-4 pl-1 py-1 {getTextColorForAgendaItem(
-					motion.meta.agendaItem
-				)}"
-			>
+			<div class="sm:w-2/3 pr-4 pl-1 py-1 {getTextColorForAgendaItem(motion.meta.agendaItem)}">
 				<p class="line-clamp-2 text-gray-600 ">{motion.meta.agendaText}</p>
 			</div>
 		</div>
-		<div class="line-clamp-6 h-24 my-2">
-			<a href={buildUrl(motion.url)}
+		<div class="sm:line-clamp-6 sm:h-24 my-4 sm:my-2">
+			<a href={buildUrl(motion.url)} target="_blank"
 				><h2 class="hover:text-blue-200 active:text-blue-300 hyphens-auto">{motion.title}</h2></a
 			>
 		</div>
 		<div class="relative {expanded ? 'grid grid-cols-1 gap-2' : ''}">
-			<Vote vote={motion.votes[0]} submitter={motion.submitter} />
+			<Vote vote={motion.votes[0]} submitter={motion.submitter} xs={xs}/>
 
 			{#if expanded}
 				{#each motion['votes'] as vote, index}
 					{#if index > 0}
-						<Vote {vote} submitter={motion.submitter} />
+						<Vote {vote} submitter={motion.submitter} xs={xs}/>
 					{/if}
 				{/each}
 			{/if}

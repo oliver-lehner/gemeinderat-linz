@@ -6,8 +6,8 @@
 <header>
 	<Header />
 </header>
-<main class="bg-gray-800">
-	<div class="h-screen container mx-auto relative mt-20 sm:mt-10">
+<main>
+	<div class="h-screen container mx-auto">
 	<slot />
 	</div>
 </main>

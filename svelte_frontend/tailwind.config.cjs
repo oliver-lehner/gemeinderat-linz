@@ -31,7 +31,17 @@ const config = {
 			full: '100%'
 		}
 	},
-	plugins: [require('@tailwindcss/line-clamp'), require('tailwindcss-hyphens')]
+	plugins: [
+		require('@tailwindcss/line-clamp'),
+		require('tailwindcss-hyphens'),
+		require('@tailwindcss/aspect-ratio')
+	],
+	variants: {
+		extend: {
+			visible: ['group-focus'],
+			invisible: ['group-focus']
+		}
+	}
 };
 
 module.exports = config;

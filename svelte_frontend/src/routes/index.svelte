@@ -1,21 +1,5 @@
-<script lang="ts">
-	import VirtualList from '@sveltejs/svelte-virtual-list';
-	import { displayData, displayDataItems } from '$lib/stores';
-
-	import Card from '$lib/Card/index.svelte';
-
-	let start: number, end: number;
-</script>
-
-{#if $displayData}
-    <VirtualList items={$displayDataItems} let:item bind:start bind:end>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-2">
-        {#each Array(12) as _, i}
-          {#if $displayData[item * 12 + i]}
-            <Card motion={$displayData[item * 12 + i]} />
-          {/if}
-        {/each}
-      </div>
-    </VirtualList>
-{/if}
-
+<h1>Linzer Torten</h1>
+<h2>Alle Anträge des Linzer Gemeinderats 2016*-2021</h2>
+<p>Diese kleine Web App veranschaulicht Abstimmungsdaten des Linzer Gemeinderats in der Periode 2015-2021. Die Datenquelle ist
+die <a href="https://www.linz.at/politik/6232.php">Online-Päsenz des Gemeinderats der Stadt Linz.</a> Hintergrundinfos gibt's auf Github.</p>
+<p>Hier geht es zu den <a sveltekit:prefetch href="/motions">Anträgen.</a></p>

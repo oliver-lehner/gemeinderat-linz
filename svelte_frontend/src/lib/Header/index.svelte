@@ -1,11 +1,12 @@
 <script lang="ts">
 	import SearchBox from '$lib/SearchBox/index.svelte';
+	import Menu from '$lib/Menu/index.svelte';
 </script>
 
-<div
-	class="w-full py-2 px-4 h-18 sm:h-10 z-50 fixed top-0 bg-gray-700 flex flex-col sm:items-center sm:flex-row"
->
-	<h1 class="flex-1 text-xl font-bold text-gray-100">Gemeinderat Linz 2015 – 2021</h1>
-	<div class="flex-0" />
-	<SearchBox />
+<div class="w-full flex flex-col px-4 py-2 fixed top-0 z-50 bg-gray-600">
+		<a sveltekit:prefetch href="/"><h1>Linzer Gemeinderat 2015-2021</h1></a>
+	<div class="flex flex-col sm:flex-row gap-2">
+		<Menu />
+		<SearchBox />	
+	</div>
 </div>

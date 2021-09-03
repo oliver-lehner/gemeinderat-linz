@@ -2,8 +2,6 @@
 	import Pie from './pie.svelte';
 	import { getPartyFacts } from '$lib/partyfacts';
 	import type { VoteResult } from '$lib/types';
-	import { debug } from 'svelte/internal';
-	import { get } from 'svelte/store';
 
 	export let vote: VoteResult, submitter: string;
 
@@ -32,20 +30,18 @@
 				: undefined;
 			let proCount = getPartyFacts(party).delegates;
 			if (contraIdx >= 0 && Array.isArray(contra[contraIdx])) {
-				proCount -=
-					contra.reduce(
-						(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),
-						0
-					);
+				proCount -= contra.reduce(
+					(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),
+					0
+				);
 			} else if (contraIdx >= 0) {
 				return undefined;
 			}
 			if (withheldIdx >= 0 && Array.isArray(withheld[withheldIdx])) {
-				proCount -=
-					withheld.reduce(
-						(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),
-						0
-					);
+				proCount -= withheld.reduce(
+					(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),
+					0
+				);
 			} else if (withheldIdx >= 0) {
 				return undefined;
 			}
