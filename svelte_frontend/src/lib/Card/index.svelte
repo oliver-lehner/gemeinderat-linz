@@ -4,7 +4,6 @@
 	import { fade, fly } from 'svelte/transition';
 
 	export let motion: Motion;
-	export let xs:boolean = false;
 	let charts: Element;
 	let expanded = false;
 
@@ -50,13 +49,13 @@
 {#if motion}
 	<div
 		class="m-1 p-2 sm:m-2 sm:p-4 flex flex-col bg-gray-700 ring-1 ring-gray-300 rounded shadow-lg
-{expanded ? 'row-span-2' : ''}"
+			{expanded ? 'row-span-2' : ''}"
 	>
 		<div
-			class="bg-gray-300 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 sm:h-10 text-sm leading-4 rounded-t flex flex-col sm:flex-row shadow-md hyphens-auto"
+			class="bg-gray-300 text-gray-700 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 sm:h-10 text-sm leading-4 rounded-t flex flex-col sm:flex-row shadow-md hyphens-auto"
 		>
 			<div class="w-1/3 pl-2 sm:pl-4 pt-1 whitespace-nowrap sm:whitespace-normal">
-				<p>
+				<p class="text-currentcolor">
 					{`#${motion.meta.meetingNo}`}
 					{`${new Date(motion.meta.date).toLocaleDateString('de-AT')} `}
 				</p>
@@ -71,12 +70,12 @@
 			>
 		</div>
 		<div class="relative {expanded ? 'grid grid-cols-1 gap-2' : ''}">
-			<Vote vote={motion.votes[0]} submitter={motion.submitter} xs={xs}/>
+			<Vote vote={motion.votes[0]} submitter={motion.submitter} />
 
 			{#if expanded}
 				{#each motion['votes'] as vote, index}
 					{#if index > 0}
-						<Vote {vote} submitter={motion.submitter} xs={xs}/>
+						<Vote {vote} submitter={motion.submitter} />
 					{/if}
 				{/each}
 			{/if}

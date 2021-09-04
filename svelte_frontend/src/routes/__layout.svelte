@@ -3,11 +3,11 @@
 	import Header from '$lib/Header/index.svelte';
 </script>
 
-<header>
-	<Header />
-</header>
-<main>
-	<div class="h-screen container mx-auto">
-	<slot />
+<div class="flex flex-col h-screen">
+	<div>
+		<Header />
 	</div>
-</main>
+	<div class="flex-1 overflow-y-auto px-4">
+		<slot />
+	</div>
+</div>

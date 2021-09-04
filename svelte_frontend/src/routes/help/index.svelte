@@ -36,85 +36,82 @@
 	};
 </script>
 
-<div class="text-gray-100">
-	<div class="w-full sticky p-2 sm:p-4 top-16 sm:top-10 z-40 bg-gray-800">
-		<h1 class="text-amber-400">Wie wird ein Antrag dargestellt?</h1>
-	</div>
-	<div class="grid grid-cols-2 sm:grid-cols-3 max-w-3xl">
+<div class="text-sm text-gray-100">
+<section class="">
+	<h1 class="sticky-header">Wie wird ein Antrag dargestellt?</h1>
+	<div class="grid grid-cols-1 sm:grid-cols-3 max-w-3xl">
 		<div class="sm:col-span-1">
-			<Card motion={example} xs={true}/>
+			<Card motion={example} />
 		</div>
-		<div class="sm:col-span-2 text-gray-100">
-			<div class="m-1 p-2 sm:m-2 sm:p-4 flex flex-col">
-				<div
-					class="border-1 border-gray-300 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 px-2 sm:px-4 py-1 h-10 text-sm leading-4 rounded-t flex flex-row shadow-md hyphens-auto"
-				>
-					<p class="line-clamp-2">
-						Sitzungsnummer & -datum, sowie der Tagesordnungspunkt des Antrags stehen ganz oben.
-					</p>
-				</div>
-				<div class="line-clamp-6 h-24 my-2">
-					<h2 class="hover:text-blue-200 active:text-blue-300 hyphens-auto">
-						Ein Klick auf den Antragstitel öffnet die Wortmeldung auf der Seite der Stadt Linz.
-					</h2>
-				</div>
-				<div class="relative text-sm leading-4">
-					<p>So werden die Abstimmungsergebnisse angezeigt:</p>
-					<div class="grid grid-cols-1 sm:grid-cols-5 my-2 gap-2 gap-x-4 justify-items-center">
-						<div class="col-span-1 w-12 min-h-12 relative">
+
+			<div class="flex flex-col gap-y-2">
+			<h3>Kopf- und Titelzeile</h3>
+				<p>Sitzungsnummer & -datum, sowie der Tagesordnungspunkt des Antrags stehen ganz oben.</p>
+				<p>Ein Klick auf den Antragstitel öffnet die Wortmeldung auf der Seite der Stadt Linz.</p>
+				<h3>Abstimmung(en)</h3>
+				<p>
+					Die Hintergrundfarbe entspricht der Farbe jener Partei, die den Antrag einbringt bzw. als
+					Berichterstatterin aufscheint.
+				</p>
+				<div class="flex flex-col">
+					<div class="flex-1 flex flex-row items-start mt-4">
+						<div class="w-12 h-12 relative">
 							<Pie parties={undefined} type={'pro'} />
 						</div>
-						<div class="sm:col-span-4">
-							<p>Das Diagramm auf der Spitze der Pyramide zeigt die Stimmen dafür.</p>
-						</div>
-						<div
-							class="col-span-1 w-12 min-h-12 relative center"
-						>
+						<p class="flex-1">Das Diagramm auf der Spitze der Pyramide zeigt die Stimmen dafür.</p>
+					</div>
+					<div class="flex-1 flex flex-row items-start">
+						<div class="w-12 h-12 relative">
 							<Pie parties={undefined} type={'withheld'} />
 						</div>
-						<div class="sm:col-span-4">
-							<p>
-								Die Linzer Torte links unten zeigt die Enthaltungen. Also Parteien die "nicht dafür"
-								sind und den Antrag damit zwar blockieren, aber auch nicht "dagegen" sind.
-								Vielleicht lohnt es sich dem Link zur Wortmeldung zu folgen.
-							</p>
-						</div>
-						<div class="col-span-1 w-12 min-h-12 relative">
-							<Pie parties={undefined} type={'contra'} />
-						</div>
-						<div class="sm:col-span-4">
-							<p>Das Diagramm rechts unten zeigt die Gegenstimmen an.</p>
-						</div>
+						<p class="flex-1">
+							Die Linzer Torte links unten zeigt die Enthaltungen. Also Parteien die "nicht dafür"
+							sind und den Antrag damit zwar blockieren, aber auch nicht "dagegen" sind. Vielleicht
+							lohnt es sich dem Link zur Wortmeldung zu folgen.
+						</p>
 					</div>
-					<p>
-						Gab es für den Antrag mehrere Abstimmungen, zB weil Zusatzanträge oder Änderungen
-						eingebracht wurden, kannst du diese mittels des Plus Buttons anzeigen.
-					</p>
+					<div class="flex-1 flex flex-row items-start">
+							<div class="w-12 h-12 relative">
+								<Pie parties={undefined} type={'contra'} />
+							</div>
+							<p class="flex-1">Das Diagramm rechts unten zeigt die Gegenstimmen an.</p>
+						</div>
 				</div>
+				<p>
+					Gab es für den Antrag mehrere Abstimmungen, zB weil Zusatzanträge oder Änderungen
+					eingebracht wurden, kannst du diese mit dem <span class="text-green-500 text-lg leading-5">+</span> Button anzeigen.
+				</p>
+	
 			</div>
-		</div>
 	</div>
-	<div class="w-full sticky p-2 sm:p-4 top-16 sm:top-12 z-40 bg-gray-800">
-		<h1 class="text-amber-400">"Rechtliches"</h1>
-		<p class="max-w-prose">
-			Die Daten wurden automatisiert verarbeitet und können trotz gründlicher Prüfung fehlerhaft
-			sein. Wie die Datenbasis zustande gekommen ist, wird näher im <a
-				href="https://github.com/oliver-lehner/gemeinderat-linz">Github-Repository</a
-			>
-			erklärt. Falls dir ein Fehler auffallen sollte oder du fragen hast, schreib mir doch eine
-			<a href="mailto:oliver.r.lehner@gmail.com">Email</a>.
-		</p>
-	</div>
-	<div class="w-full sticky p-2 sm:p-4 top-16 sm:top-12 z-40 bg-gray-800">
-		<h1 class="text-amber-400">DSGVO & Cookies</h1>
-		<p class="max-w-prose">
-			Ich benutze <a href="https://www.goatcounter.com/">Goat Counter</a> um Besuchende zu zählen. Dabei
-			werden keine personenbezogenen Daten verarbeitet und auch keine Cookies gesetzt.
-		</p>
-	</div>
-	<div class="w-full sticky p-2 sm:p-4 top-16 sm:top-12 z-40 bg-gray-800">
-		<h1 class="text-amber-400">Impressum</h1>
-		<p>Für den Inhalt dieser Seite verantwortlich:</p>
-    <Personals/>
-	</div>
+</section>
+<section class="min-h-full">
+	<h1 class="sticky-header">"Rechtliches"</h1>
+	<p class="max-w-prose">
+		Die Daten wurden automatisiert verarbeitet und können trotz gründlicher Prüfung fehlerhaft sein.
+		Wie die Datenbasis zustande gekommen ist, wird näher im <a
+			href="https://github.com/oliver-lehner/gemeinderat-linz">Github-Repository</a
+		>
+		erklärt. Falls dir ein Fehler auffallen sollte oder du fragen hast, schreib mir doch eine
+		<a href="mailto:oliver.r.lehner@gmail.com">Email</a>.
+	</p>
+</section>
+<section class="">
+	<h1 class="sticky-header">DSGVO & Cookies</h1>
+	<p class="max-w-prose">
+		Ich benutze <a href="https://www.goatcounter.com/">Goat Counter</a> um Besuchende zu zählen. Dabei
+		werden keine personenbezogenen Daten verarbeitet und auch keine Cookies gesetzt.
+	</p>
+</section>
+
+<section class="">
+	<h1 class="sticky-header">Impressum</h1>
+	<p>Für den Inhalt dieser Seite verantwortlich:</p>
+	<Personals />
+</section>
 </div>
+<style lang="postcss">
+	.sticky-header {
+		@apply w-full sticky py-2 top-0 z-40 bg-gray-800 text-amber-400;
+	}
+</style>

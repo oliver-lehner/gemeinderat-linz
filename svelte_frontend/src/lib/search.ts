@@ -27,14 +27,14 @@ const options = {
 const fuse = new Fuse(data, options);
 
 export function search(term: string) {
-	if (term.length > 0) {
-		const result = fuse.search(term);
-		displayData.update(() => result.map((value) => value.item));
+	if (term && term.length > 0) {
+		const result = fuse.search(term).map((value) => value.item);
+		displayData.update(() => result);
+	} else {
+		resetDisplayData();
 	}
 }
 
-export function reset(){
+export function reset() {
 	resetDisplayData();
 }
-
-

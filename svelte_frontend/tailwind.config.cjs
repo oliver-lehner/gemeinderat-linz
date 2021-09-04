@@ -38,8 +38,7 @@ const config = {
 	],
 	variants: {
 		extend: {
-			visible: ['group-focus'],
-			invisible: ['group-focus']
+			visibility: ['group-focus'],
 		}
 	}
 };
