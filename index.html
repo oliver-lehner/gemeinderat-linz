@@ -10,18 +10,19 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-29a5f03f.js">
+		<link rel="modulepreload" href="/_app/start-7fffa745.js">
 		<link rel="modulepreload" href="/_app/chunks/vendor-410b8f4d.js">
 		<link rel="modulepreload" href="/_app/chunks/singletons-ff603286.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf9239c7.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-8eff95cf.js">
 		<link rel="modulepreload" href="/_app/chunks/stores-a2a4e9fe.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-7f5b048d.js">
+		<link rel="modulepreload" href="/_app/pages/index.svelte-f6aca90e.js">
 		<link rel="stylesheet" href="/_app/assets/start-464e9d0a.css">
 		<link rel="stylesheet" href="/_app/assets/vendor-1d0ff75f.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-1a2bf137.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-9558dfef.css">
+		<link rel="stylesheet" href="/_app/assets/pages/index.svelte-21e5a01c.css">
 
 		<script type="module">
-			import { start } from "/_app/start-29a5f03f.js";
+			import { start } from "/_app/start-7fffa745.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -34,8 +35,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-cf9239c7.js"),
-						import("/_app/pages/index.svelte-7f5b048d.js")
+						import("/_app/pages/__layout.svelte-8eff95cf.js"),
+						import("/_app/pages/index.svelte-f6aca90e.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -51,18 +52,22 @@
 		<div id="svelte">
 
 
-<div class="flex flex-col h-screen"><div><div class="w-full flex flex-col px-4 py-2 bg-gray-600"><a sveltekit:prefetch href="/"><h1>Linzer Gemeinderat 2015-2021</h1></a>
+<div class="flex flex-col h-screen"><div><div class="w-full flex flex-col px-4 py-2 bg-gray-600"><a sveltekit:prefetch href="/"><h1 class="drop-shadow-md">Linzer Gemeinderat in Torten</h1></a>
 	<div class="flex flex-col items-baseline sm:flex-row gap-x-2"><nav><ul class="flex flex-row text-l font-semibold gap-4"><li class="text-gray-100"><a sveltekit:prefetch href="/motions">Anträge</a></li>
 		<li class="text-gray-100"><a sveltekit:prefetch href="/help">Hilfe &amp; Infos</a></li></ul>
 	<ul></ul></nav>
 		<form class="flex text-l"><div class="pt-1 px-1 border-b-2 font-bold text-pink-200 focus-within:text-gray-700 focus-within:bg-gray-200 focus-within:rounded focus-within:shadow-inner"><input class="bg-transparent outline-none" value="">
 		<button type="button" class="text-2xl leading-3 text-red-500 invisible">×</button></div>
 	<button type="submit" class="ml-2 px-2 hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2 rounded inline-flex gap-2 items-center "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.5 598.5" class="w-5 h-5 fill-current"><g data-name="Layer 1" fill="current"><path d="M462.7 224.2a93 93 0 01-175 44 104.2 104.2 0 10126-126 93 93 0 0149 82z"></path><path d="M531.9 66.6A227.5 227.5 0 00210 388.4 227.5 227.5 0 00532 66.6zm-13 304a209.5 209.5 0 01-292.1 4.1l41.5-41.5a147 147 0 01-44.8-105.7C223.5 146.2 289.7 80 371 80a147 147 0 01105.7 44.8L523 78.5a209.5 209.5 0 01-4.1 292.1z"></path><path d="M211.9 390.1L18 584a34.6 34.6 0 010-49l171-171-4.7-6.4L11.7 530.2a40 40 0 1056.6 56.6l172.6-172.6a230.3 230.3 0 01-29-24.1z"></path><circle cx="421" cy="277.5" r="50"></circle><circle cx="309.5" cy="223" r="21.5"></circle></g></svg>Suchen</button></form></div></div></div>
-	<div class="flex-1 overflow-y-auto"><h1>Linzer Torten</h1>
-<h2>Alle Anträge des Linzer Gemeinderats 2016*-2021</h2>
-<p>Diese kleine Web App veranschaulicht Abstimmungsdaten des Linzer Gemeinderats in der Periode 2015-2021. Die Datenquelle ist
-die <a href="https://www.linz.at/politik/6232.php">Online-Päsenz des Gemeinderats der Stadt Linz.</a> Hintergrundinfos gibt&#39;s auf Github.</p>
-<p>Hier geht es zu den <a sveltekit:prefetch href="/motions">Anträgen.</a></p></div></div>
+	<div class="flex-1 overflow-y-auto px-4"><h1 class="mb-4 mt-2">Linzer Torten</h1>
+<h2 class="mb-2">Alle Anträge des Linzer Gemeinderats 2015-2021</h2>
+<p class="svelte-7o8pla">Diese kleine Web App veranschaulicht alle Abstimmungen des Linzer Gemeinderats in der letzten
+	Periode. Die Datenquelle ist die <a href="https://www.linz.at/politik/6232.php">Online-Päsenz des Gemeinderats der Stadt Linz.</a></p>
+<p class="svelte-7o8pla">Weitere Infos, wie die Daten zustande kamen und zu lesen sind gibt&#39;s
+	<a sveltekit:prefetch href="/help">hier</a>
+	und auf
+	<a href="https://github.com/oliver-lehner/gemeinderat-linz">Github.</a></p>
+<p class="svelte-7o8pla">Hier geht es zu den <a sveltekit:prefetch href="/motions">Anträgen.</a></p></div></div>
 
 
 
