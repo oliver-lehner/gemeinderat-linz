@@ -24,7 +24,7 @@ function getMeetingDateAndNumber(item: DataItem): [Date, number] {
 
   let date = new Date(
     parseInt(dateRxMatches[0][4]),
-    parseInt(dateRxMatches[0][3]),
+    parseInt(dateRxMatches[0][3])-1, //fucking monthIndex who came up with this?
     parseInt(dateRxMatches[0][2]),
     parseInt(dateRxMatches[0][5]),
     0,
