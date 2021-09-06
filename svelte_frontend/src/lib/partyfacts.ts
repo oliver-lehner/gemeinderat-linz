@@ -10,17 +10,21 @@ const partyFacts = {
 export function getPartyFacts(
 	party: string | string[] | (string | number)[]
 ): { color: string; percent: number; delegates: number } {
-	let singleDelegatePercent;
+	let delegateCount, singleDelegatePercent, partyIndex;
 	if (Array.isArray(party)) {
-		party = typeof party[0] == 'string' ? party[0] : undefined;
-		singleDelegatePercent = partyFacts[party].percent / partyFacts[party].delegates;
+		partyIndex = typeof party[0] == 'string' ? party[0] : undefined;
+		delegateCount =
+			typeof party[1] == 'string' ? 1 : typeof party[1] == 'number' ? party[1] : undefined;
+		singleDelegatePercent = partyFacts[partyIndex].percent / partyFacts[partyIndex].delegates;
+	} else {
+		partyIndex = party;
 	}
-	if(singleDelegatePercent){
-		const {color} = partyFacts[party];
-		return {color: color, percent: singleDelegatePercent, delegates: 1}
+	if (delegateCount) {
+		const { color } = partyFacts[partyIndex];
+		return { color: color, percent: delegateCount * singleDelegatePercent, delegates: delegateCount };
 	}
-	if (party && (partyFacts[party] || partyFacts[(party = party.toUpperCase())])) {
-		return partyFacts[party];
+	if (partyIndex && (partyFacts[partyIndex] || partyFacts[(partyIndex = partyIndex.toUpperCase())])) {
+		return partyFacts[partyIndex];
 	} else {
 		return undefined;
 	}

@@ -54,13 +54,13 @@
 		<div
 			class="bg-gray-300 text-gray-700 -mx-2 -mt-2 sm:-mx-4 sm:-mt-4 sm:h-10 text-sm leading-4 rounded-t flex flex-col sm:flex-row shadow-md hyphens-auto"
 		>
-			<div class="w-1/3 pl-2 sm:pl-4 pt-1 whitespace-nowrap sm:whitespace-normal">
+			<div class="w-1/3 pl-2 sm:pl-4  whitespace-nowrap sm:whitespace-normal">
 				<p class="text-currentcolor">
 					{`#${motion.meta.meetingNo}`}
 					{`${new Date(motion.meta.date).toLocaleDateString('de-AT')} `}
 				</p>
 			</div>
-			<div class="sm:w-2/3 pr-4 pl-1 py-1 {getTextColorForAgendaItem(motion.meta.agendaItem)}">
+			<div class="sm:w-2/3 pr-4 pl-1 py-0 {getTextColorForAgendaItem(motion.meta.agendaItem)}">
 				<p class="line-clamp-2 text-gray-600 ">{motion.meta.agendaText}</p>
 			</div>
 		</div>

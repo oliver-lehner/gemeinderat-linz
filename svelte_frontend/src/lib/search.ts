@@ -14,14 +14,27 @@ const options = {
 	// shouldSort: true,
 	// includeMatches: false,
 	// findAllMatches: false,
-	// minMatchCharLength: 1,
+	minMatchCharLength: 3,
 	// location: 0,
 	threshold: 0.4,
 	// distance: 100,
 	// useExtendedSearch: false,
-	// ignoreLocation: false,
+	ignoreLocation: true,
 	// ignoreFieldNorm: false,
-	keys: ['title', 'submitter', 'meta.agendaText']
+	keys: [
+		{
+			name: 'title',
+			weight: 6
+		},
+		{
+			name: 'submitter',
+			weight: 3
+		},
+		{
+			name: 'meta.agendaText',
+			weight: 5
+		}
+	]
 };
 
 const fuse = new Fuse(data, options);
