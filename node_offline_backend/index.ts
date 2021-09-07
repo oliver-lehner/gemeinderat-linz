@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { URL } from "url";
-import * as json from "./repair.json";
+import * as json from "./raw-data.json";
 import { Motion, VoteResult, DataItem } from "./types";
 
 function getTitleInfo(item: DataItem): RegExpMatchArray {
@@ -166,7 +166,7 @@ function countVotes(value: string): {
 } {
   const match = [
     ...value.matchAll(
-      /(?<side>(?:.*nthaltung:\s?|Ge.*mme:\s?))(?<parties>.*)/gm
+      /(?<side>(?:.*nthaltung:\s?|Gegenst.*:\s?))(?<parties>.*)/gm
     ),
   ][0];
   let result;
@@ -276,7 +276,7 @@ function main() {
 
   const outputString = JSON.stringify(sorted);
 
-  fs.writeFile("./gr-results.json", outputString, "utf8", (err) => {
+  fs.writeFile("./gr-data.json", outputString, "utf8", (err) => {
     if (err) {
       console.log(`Error writing file: ${err}`);
     } else {
