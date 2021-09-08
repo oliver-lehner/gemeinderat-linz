@@ -7,48 +7,9 @@
 
 	$: chartColor = getPartyFacts(submitter).color || '--accent-color';
 
-	$: ({ contra, withheld } = vote);
+	$: ({ contra, withheld, pro } = vote);
 
-	$: pro = ['SPÖ', 'FPÖ', 'ÖVP', 'Die Grünen', 'NEOS', 'KPÖ']
-		//this function was 3 lines long before NEOS and their splits came along
-		/* 	
-		if(Array.isArray(value)){
-			return !(contra && contra.includes(value[0]) || withheld && withheld.includes(value[0]));
-		}
-		return !(contra && contra.includes(value) || withheld && withheld.includes(value));
- 		*/
-		.map((party) => {
-			const contraIdx = contra
-				? contra.findIndex((cParty) =>
-						Array.isArray(cParty) ? cParty[0] == party : cParty == party
-				  )
-				: undefined;
-			const withheldIdx = withheld
-				? withheld.findIndex((wParty) =>
-						Array.isArray(wParty) ? wParty[0] == party : wParty == party
-				  )
-				: undefined;
-			let proCount = getPartyFacts(party).delegates;
-			if (contraIdx >= 0 && Array.isArray(contra[contraIdx])) {
-				proCount -= contra.reduce(
-					(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),
-					0
-				);
-			} else if (contraIdx >= 0) {
-				return undefined;
-			}
-			if (withheldIdx >= 0 && Array.isArray(withheld[withheldIdx])) {
-				proCount -= withheld.reduce(
-					(accumulator, currentValue) => accumulator + (Array.isArray(currentValue) ? 1 : 0),
-					0
-				);
-			} else if (withheldIdx >= 0) {
-				return undefined;
-			}
-			if (proCount < getPartyFacts(party).delegates) return [party, proCount];
-			return party;
-		})
-		.filter((value) => value != undefined);
+	
 </script>
 
 <div class="chart" style={`background-color: var(${chartColor})`}>

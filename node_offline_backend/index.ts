@@ -2,6 +2,7 @@ import * as fs from "fs";
 import { URL } from "url";
 import * as json from "./raw-data.json";
 import { Motion, VoteResult, DataItem } from "./types";
+import { getPartyFacts } from "./partyfacts";
 
 function getTitleInfo(item: DataItem): RegExpMatchArray {
   return [
@@ -24,7 +25,7 @@ function getMeetingDateAndNumber(item: DataItem): [Date, number] {
 
   let date = new Date(
     parseInt(dateRxMatches[0][4]),
-    parseInt(dateRxMatches[0][3])-1, //fucking monthIndex who came up with this?
+    parseInt(dateRxMatches[0][3]) - 1, //fucking monthIndex who came up with this?
     parseInt(dateRxMatches[0][2]),
     parseInt(dateRxMatches[0][5]),
     0,
@@ -48,6 +49,53 @@ function getAgenda(item: DataItem): {} {
   return agenda;
 }
 
+function getProVotes(result: VoteResult): (string | (string | number)[])[] {
+  return (
+    ["SPÖ", "FPÖ", "ÖVP", "Die Grünen", "NEOS", "KPÖ"]
+      //this function was 3 lines long before NEOS and their splits came along
+      /* 	
+		if(Array.isArray(value)){
+			return !(contra && contra.includes(value[0]) || withheld && withheld.includes(value[0]));
+		}
+		return !(contra && contra.includes(value) || withheld && withheld.includes(value));
+ 		*/
+      .map((party) => {
+        const contraIdx = result.contra
+          ? result.contra.findIndex((cParty) =>
+              Array.isArray(cParty) ? cParty[0] == party : cParty == party
+            )
+          : undefined;
+        const withheldIdx = result.withheld
+          ? result.withheld.findIndex((wParty) =>
+              Array.isArray(wParty) ? wParty[0] == party : wParty == party
+            )
+          : undefined;
+        let proCount = getPartyFacts(party).delegates;
+        if (contraIdx >= 0 && Array.isArray(result.contra[contraIdx])) {
+          proCount -= result.contra.reduce(
+            (accumulator, currentValue) =>
+              accumulator + (Array.isArray(currentValue) ? 1 : 0),
+            0
+          );
+        } else if (contraIdx >= 0) {
+          return undefined;
+        }
+        if (withheldIdx >= 0 && Array.isArray(result.withheld[withheldIdx])) {
+          proCount -= result.withheld.reduce(
+            (accumulator, currentValue) =>
+              accumulator + (Array.isArray(currentValue) ? 1 : 0),
+            0
+          );
+        } else if (withheldIdx >= 0) {
+          return undefined;
+        }
+        if (proCount < getPartyFacts(party).delegates) return [party, proCount];
+        return party;
+      })
+      .filter((value) => value != undefined)
+  );
+}
+
 function getVoteResults(item: DataItem): VoteResult[] {
   const result: string[] = item.antrag_ergebnisdetail.split("\n");
   let voteResults = new Array<VoteResult>();
@@ -57,11 +105,15 @@ function getVoteResults(item: DataItem): VoteResult[] {
     if (partialResult && typeof partialResult != "string") {
       if ("subject" in partialResult && "action" in partialResult) {
         let passed = partialResult.action.includes("angenommen");
-        voteResults.push({
+        let result:VoteResult = {
           subject: partialResult.subject,
           passed: passed,
           meta: [partialResult.action],
-        });
+        }
+        if(partialResult.action.includes("nicht")){
+          result.rejected = true;
+        }
+        voteResults.push(result);
         currentSubject = partialResult.subject;
       } else if ("vote" in partialResult) {
         let index = voteResults.findIndex(
@@ -87,6 +139,10 @@ function getVoteResults(item: DataItem): VoteResult[] {
         }
       }
     }
+  });
+  voteResults = voteResults.map((vote): VoteResult => {
+    if(!vote.rejected) vote.pro = getProVotes(vote);    
+    return vote;
   });
   return voteResults;
 }
@@ -275,6 +331,7 @@ function main() {
   });
 
   const outputString = JSON.stringify(sorted);
+  console.log(sorted.length);
 
   fs.writeFile("./gr-data.json", outputString, "utf8", (err) => {
     if (err) {

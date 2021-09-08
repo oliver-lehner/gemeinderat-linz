@@ -2,6 +2,8 @@ export type VoteResult = {
   subject: string;
   meta?: string[];
   passed?: boolean;
+  rejected?: boolean;
+  pro?: (string | (string | number)[])[];
   withheld?: (string | string[])[];
   contra?: (string | string[])[];
 };

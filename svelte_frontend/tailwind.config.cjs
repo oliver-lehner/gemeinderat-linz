@@ -34,7 +34,8 @@ const config = {
 	plugins: [
 		require('@tailwindcss/line-clamp'),
 		require('tailwindcss-hyphens'),
-		require('@tailwindcss/aspect-ratio')
+		require('@tailwindcss/aspect-ratio'),
+		require('@tailwindcss/forms')
 	],
 	variants: {
 		extend: {

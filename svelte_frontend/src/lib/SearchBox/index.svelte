@@ -31,7 +31,7 @@
 	</div>
 	<button
 		type="submit"
-		class="ml-2 px-2 hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2
+		class="ml-2 px-3 py-1 hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2
 		 rounded inline-flex gap-2 items-center "><SearchIcon />Suchen</button
 	>
 </form>
