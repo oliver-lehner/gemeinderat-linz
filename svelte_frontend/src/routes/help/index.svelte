@@ -22,6 +22,7 @@
 				subject: 'Abstimmung',
 				passed: true,
 				meta: ['grün heißt: angenommen!'],
+				pro: ['SPÖ', 'FPÖ', 'ÖVP'],
 				withheld: ['Die Grünen', 'NEOS'],
 				contra: ['KPÖ']
 			},
@@ -29,6 +30,7 @@
 				subject: 'Zusätzliche Abstimmung (Kapitel, Zusatz, Änderung...)',
 				passed: false,
 				meta: ['rot heißt: abgelehnt!', 'grau heißt: Zusatzinfo! (Befangenheit, Abwesenheit,...)'],
+				pro: ['Die Grünen', 'NEOS'],
 				withheld: ['SPÖ', 'FPÖ', 'ÖVP'],
 				contra: ['KPÖ']
 			}
@@ -92,6 +94,15 @@
 			Mit der Suchfunktion kannst du Anträge filtern. Es werden nicht nur Titel, sondern auch
 			Tagesordnungspunkte und berichterstattenden Parteien durchsucht. So kannst du zB zuerst alle
 			Anträge zeigen lassen, die eine Partei eingebracht hat, wenn du nach der Partei suchst.
+		</p>
+	</section>
+	<section class="min-h-full">
+		<h1 class="sticky-header">Filtern</h1>
+		<p class="max-w-prose sm:ml-2">
+			Du kannst die Anträge nach Abstimmungsverhalten filtern. Wähle die Parteien und ihr
+			Stimmverhalten aus und es werden nur Anträge angezeigt, wo zumindest eine Abstimmung diesem
+			Filter entspricht. Versuche zB "Fahrrad" als Suchbegriff mit dem Filter "SPÖ, FPÖ enthalten
+			sich".
 		</p>
 	</section>
 	<section class="min-h-full">

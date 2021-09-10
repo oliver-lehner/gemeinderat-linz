@@ -4,10 +4,8 @@
 </script>
 
 <div class="flex flex-col h-screen">
-	<div>
-		<Header />
-	</div>
-	<div class="flex-1 overflow-y-auto px-4">
+	<Header />
+	<main class="flex-1 overflow-y-auto px-4">
 		<slot />
-	</div>
+	</main>
 </div>

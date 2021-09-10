@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-	<ul class="flex flex-row text-l font-semibold gap-4">
+	<ul class="flex flex-row text-sm sm:text-base font-semibold gap-4">
 		<li
 			class=" {$page.path == '/motions'
 				? 'text-yellow-300'
@@ -14,7 +14,7 @@
 		<li
 			class="{$page.path == '/help'
 				? 'text-yellow-300'
-				: 'text-gray-100'}"
+				: 'text-gray-100'} line-clamp-1"
 		>
 			<a sveltekit:prefetch href="/help">Hilfe & Infos</a>
 		</li>

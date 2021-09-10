@@ -9,7 +9,7 @@
 </script>
 
 <form
-	class="flex text-l"
+	class="flex gap-2"
 	on:submit|preventDefault={() => {
 		prefetch('/motions?search=' + searchTerm).then(() => {
 			goto('/motions?search=' + searchTerm);
@@ -17,7 +17,7 @@
 	}}
 >
 	<div
-		class="pt-1 px-1 border-b-2 font-bold text-pink-200 focus-within:text-gray-700 focus-within:bg-gray-200 focus-within:rounded focus-within:shadow-inner"
+		class="text-sm h-6 sm:h-auto sm:text-base flex border-b-2 font-bold text-pink-200 focus-within:text-gray-700 focus-within:bg-gray-200 focus-within:rounded focus-within:shadow-inner"
 	>
 		<input class="bg-transparent outline-none" bind:value={searchTerm} />
 		<button
@@ -31,7 +31,7 @@
 	</div>
 	<button
 		type="submit"
-		class="ml-2 px-3 py-1 hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2
+		class="px-2 h-6 w-24 sm:h-auto hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2
 		 rounded inline-flex gap-2 items-center "><SearchIcon />Suchen</button
 	>
 </form>

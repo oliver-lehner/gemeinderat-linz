@@ -7,11 +7,16 @@
 	export let parties: (string | string[] | (string | number)[])[];
 	export let type = 'pro';
 
-	const meta = {
-		pro: { text: 'Stimmen dafür: ', bg: proSVG },
-		contra: { text: 'Gegenstimmen: ', bg: contraSVG },
-		withheld: { text: 'Enthaltungen: ', bg: contraSVG }
-	};
+	function getMeta(type: string) {
+		const meta = {
+			pro: { text: 'Stimmen dafür: ', bg: proSVG },
+			contra: { text: 'Gegenstimmen: ', bg: contraSVG },
+			withheld: { text: 'Enthaltungen: ', bg: contraSVG }
+		};
+
+		if (!type || !meta[type]) return { text: 'Nicht definiert', bg: '' };
+		return meta[type];
+	}
 
 	let segments, offset;
 
@@ -34,23 +39,17 @@
 
 <svg viewBox="0 0 42 42" width="100%" height="100%">
 	{#if parties && parties.length > 0}
-		<title>{meta[type].text + parties.join()}</title>
+		<title>{getMeta(type).text + parties.join()}</title>
 	{/if}
-		<clipPath id="clip-path-circle">
-			<circle cx="21" cy="21" r="17" />
-		</clipPath>
-	<image width="90%" height="90%" x="5%" y="5%" href={meta[type].bg} />
+	<image width="100%" height="100%" x="" y="" href={getMeta(type).bg} />
 	{#if type === 'withheld'}
 		<image
-			width="90%"
-			height="90%"
-			x="5%"
-			y="5%"
+			width="100%" height="100%"
 			transform="rotate(90, 21,21)"
-			href={meta[type].bg}
+			href={getMeta(type).bg}
 		/>
 	{/if}
-	<g clip-path="url(#clip-path-circle)">
+	<g id="segments" >
 		{#if parties && parties.length > 0}
 			{#each segments as segment}
 				<Segment percent={segment['percent']} color={segment['color']} offset={segment['offset']} />
@@ -63,5 +62,9 @@
 	svg {
 		position: absolute;
 		z-index: 30;
+	}
+
+	#segments {
+		clip-path: circle(60%);
 	}
 </style>

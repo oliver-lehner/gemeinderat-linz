@@ -28,10 +28,11 @@
 
 <style>
 	.chart {
+		padding: 0.1em;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 0.86fr 0.14fr 0.86fr;
-		gap: 0px 0px;
+		gap: 0em 0.1em;
 		grid-auto-flow: row;
 		grid-area: 1 /1 /1 /1;
 		width: 100%;

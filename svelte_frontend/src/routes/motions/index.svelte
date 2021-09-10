@@ -1,13 +1,13 @@
 <script lang="ts">
 	import VirtualList from '@sveltejs/svelte-virtual-list';
 	import { displayData, displayDataItems } from '$lib/stores';
-	import { filteredData, filteredDataItems } from '$lib/stores';
+	import { filteredData, filteredDataItems, searchTerm } from '$lib/stores';
 	import { page } from '$app/stores';
-	import { search } from '$lib/search';
+	//import { search } from '$lib/search';
 	import Card from '$lib/Card/index.svelte';
 
 	let start: number;
-	$: search($page.query.get('search'));
+	$: $searchTerm = $page.query.get('search');
 </script>
 
 {#if $filteredData && $filteredData.length > 0}
