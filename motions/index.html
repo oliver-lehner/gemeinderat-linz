@@ -10,20 +10,22 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-573dcd37.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-410b8f4d.js">
+		<link rel="modulepreload" href="/_app/start-6832e890.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-7b9dede9.js">
 		<link rel="modulepreload" href="/_app/chunks/singletons-ff603286.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-7aa3372a.js">
-		<link rel="modulepreload" href="/_app/chunks/stores-a2a4e9fe.js">
-		<link rel="modulepreload" href="/_app/pages/motions/index.svelte-fd7046a6.js">
-		<link rel="modulepreload" href="/_app/chunks/index-cde78295.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-e2df0700.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-a8608fde.js">
+		<link rel="modulepreload" href="/_app/chunks/pie-2f59c1db.js">
+		<link rel="modulepreload" href="/_app/pages/motions/index.svelte-91941b6b.js">
+		<link rel="modulepreload" href="/_app/chunks/index-82cbfcc3.js">
 		<link rel="stylesheet" href="/_app/assets/start-464e9d0a.css">
 		<link rel="stylesheet" href="/_app/assets/vendor-1d0ff75f.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-07393c45.css">
-		<link rel="stylesheet" href="/_app/assets/index-7fef6c50.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b5b2e0d4.css">
+		<link rel="stylesheet" href="/_app/assets/pie-e43a28af.css">
+		<link rel="stylesheet" href="/_app/assets/index-1e9c6564.css">
 
 		<script type="module">
-			import { start } from "/_app/start-573dcd37.js";
+			import { start } from "/_app/start-6832e890.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -36,8 +38,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-7aa3372a.js"),
-						import("/_app/pages/motions/index.svelte-fd7046a6.js")
+						import("/_app/pages/__layout.svelte-e2df0700.js"),
+						import("/_app/pages/motions/index.svelte-91941b6b.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -53,14 +55,35 @@
 		<div id="svelte">
 
 
-<div class="flex flex-col h-screen"><div><div class="w-full flex flex-col px-4 py-2 bg-gray-600"><a sveltekit:prefetch href="/"><h1 class="drop-shadow-md">Linzer Gemeinderat in Torten</h1></a>
-	<div class="flex flex-col items-baseline sm:flex-row gap-x-2"><nav><ul class="flex flex-row text-l font-semibold gap-4"><li class="text-yellow-300"><a sveltekit:prefetch href="/motions">Anträge</a></li>
-		<li class="text-gray-100"><a sveltekit:prefetch href="/help">Hilfe &amp; Infos</a></li></ul>
+<div class="flex flex-col h-screen"><header class="w-full flex flex-col px-4 py-1 sm:pt-2 bg-gray-600"><a sveltekit:prefetch href="/"><h1 class="drop-shadow-md text-base sm:text-lg">Linzer Gemeinderat in Torten</h1></a>
+	<div class="flex flex-col items-baseline sm:flex-row gap-x-2"><nav><ul class="flex flex-row text-sm sm:text-base font-semibold gap-4"><li class="text-yellow-300"><a sveltekit:prefetch href="/motions">Anträge</a></li>
+		<li class="text-gray-100 line-clamp-1"><a sveltekit:prefetch href="/help">Hilfe &amp; Infos</a></li></ul>
 	<ul></ul></nav>
-		<form class="flex text-l"><div class="pt-1 px-1 border-b-2 font-bold text-pink-200 focus-within:text-gray-700 focus-within:bg-gray-200 focus-within:rounded focus-within:shadow-inner"><input class="bg-transparent outline-none" value="">
+		<div class="flex flex-col items-end sm:flex-row gap-x-2 gap-y-1 sm:h-8"><form class="flex gap-2"><div class="text-sm h-6 sm:h-auto sm:text-base flex border-b-2 font-bold text-pink-200 focus-within:text-gray-700 focus-within:bg-gray-200 focus-within:rounded focus-within:shadow-inner"><input class="bg-transparent outline-none" value="">
 		<button type="button" class="text-2xl leading-3 text-red-500 invisible">×</button></div>
-	<button type="submit" class="ml-2 px-2 hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2 rounded inline-flex gap-2 items-center "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.5 598.5" class="w-5 h-5 fill-current"><g data-name="Layer 1" fill="current"><path d="M462.7 224.2a93 93 0 01-175 44 104.2 104.2 0 10126-126 93 93 0 0149 82z"></path><path d="M531.9 66.6A227.5 227.5 0 00210 388.4 227.5 227.5 0 00532 66.6zm-13 304a209.5 209.5 0 01-292.1 4.1l41.5-41.5a147 147 0 01-44.8-105.7C223.5 146.2 289.7 80 371 80a147 147 0 01105.7 44.8L523 78.5a209.5 209.5 0 01-4.1 292.1z"></path><path d="M211.9 390.1L18 584a34.6 34.6 0 010-49l171-171-4.7-6.4L11.7 530.2a40 40 0 1056.6 56.6l172.6-172.6a230.3 230.3 0 01-29-24.1z"></path><circle cx="421" cy="277.5" r="50"></circle><circle cx="309.5" cy="223" r="21.5"></circle></g></svg>Suchen</button></form></div></div></div>
-	<div class="flex-1 overflow-y-auto px-4"><svelte-virtual-list-viewport style="height: 100%;" class="svelte-1kdxoed"><svelte-virtual-list-contents style="padding-top: 0px; padding-bottom: 0px;" class="svelte-1kdxoed"></svelte-virtual-list-contents></svelte-virtual-list-viewport></div></div>
+	<button type="submit" class="px-2 h-6 w-24 sm:h-auto hover:text-gray-700 text-gray-100 bg-green-500 hover:bg-green-300 hover:ring-green-200 hover:ring-2 rounded inline-flex gap-2 items-center "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.5 598.5" class="w-4 h-4 fill-current"><g data-name="Layer 1" fill="current"><path d="M462.7 224.2a93 93 0 01-175 44 104.2 104.2 0 10126-126 93 93 0 0149 82z"></path><path d="M531.9 66.6A227.5 227.5 0 00210 388.4 227.5 227.5 0 00532 66.6zm-13 304a209.5 209.5 0 01-292.1 4.1l41.5-41.5a147 147 0 01-44.8-105.7C223.5 146.2 289.7 80 371 80a147 147 0 01105.7 44.8L523 78.5a209.5 209.5 0 01-4.1 292.1z"></path><path d="M211.9 390.1L18 584a34.6 34.6 0 010-49l171-171-4.7-6.4L11.7 530.2a40 40 0 1056.6 56.6l172.6-172.6a230.3 230.3 0 01-29-24.1z"></path><circle cx="421" cy="277.5" r="50"></circle><circle cx="309.5" cy="223" r="21.5"></circle></g></svg>Suchen</button></form>
+			<div class="h-6 transition-all"><div class="flex items-baseline gap-2"><div class="text-gray-100 line-clamp-1 text-sm overflow-clip">0 Anträge
+					</div>
+					<button class="bg-yellow-300 w-24 h-6 sm:h-auto rounded inline-flex justify-between items-center gap-2 text-gray-700 px-2 hover:bg-yellow-200 hover:ring-1 hover:ring-yellow-500">Filter <div class="border-gray-700 border-b-2 border-l-2 h-2 w-2 -rotate-45 mb-1"></div></button></div>
+				<div class="absolute z-50 opacity-0 transition-all"><div class="flex mt-1 mr-4 bg-gray-700 rounded-b px-2 py-1 shadow-md"><div class="flex flex-col max-w-sm"><div class="flex mb-1"><div class="flex flex-wrap"><label for="partySPÖ" class="inline-flex items-center gap-1 mr-2 text-gray-100"><input type="checkbox" class="svelte-w0wtjr">
+						SPÖ
+					</label><label for="partyFPÖ" class="inline-flex items-center gap-1 mr-2 text-gray-100"><input type="checkbox" class="svelte-w0wtjr">
+						FPÖ
+					</label><label for="partyÖVP" class="inline-flex items-center gap-1 mr-2 text-gray-100"><input type="checkbox" class="svelte-w0wtjr">
+						ÖVP
+					</label><label for="partyDie Grünen" class="inline-flex items-center gap-1 mr-2 text-gray-100"><input type="checkbox" class="svelte-w0wtjr">
+						Die Grünen
+					</label><label for="partyNEOS" class="inline-flex items-center gap-1 mr-2 text-gray-100"><input type="checkbox" class="svelte-w0wtjr">
+						NEOS
+					</label><label for="partyKPÖ" class="inline-flex items-center gap-1 mr-2 text-gray-100"><input type="checkbox" class="svelte-w0wtjr">
+						KPÖ
+					</label></div>
+			<div class="mx-2 flex items-center"><div class="w-12 h-12"></div></div></div>
+		<select name="side" id="side" class="bg-yellow-500 border-0 text-gray-700 shadow-md py-1 rounded"><option value="none">Filter auswählen...</option><option value="pro">stimmen dafür</option><option value="withheld">enthalten sich</option><option value="contra">stimmen dagegen</option></select>
+		
+		<button class="bg-red-500 rounded text-gray-100 font-bold self-end mt-1 px-2 hover:bg-red-300 hover:text-gray-700">Zurücksetzen</button></div>
+</div></div></div></div></div></header>
+	<main class="flex-1 overflow-y-auto px-4"><h1 class="mt-48">Leider konnten zu deiner Anfrage keine Anträge gefunden werden.</h1></main></div>
 
 
 
