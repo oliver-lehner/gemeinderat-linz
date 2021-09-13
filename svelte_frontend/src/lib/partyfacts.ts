@@ -23,7 +23,7 @@ export function getPartyFacts(
 	} else {
 		partyIndex = party;
 	}
-	if (delegateCount) {
+	if (delegateCount != undefined) {
 		const { color } = partyFacts[partyIndex];
 		return { color: color, percent: delegateCount * singleDelegatePercent, delegates: delegateCount };
 	}

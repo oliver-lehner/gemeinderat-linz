@@ -9,7 +9,7 @@
 </script>
 
 <header class="w-full flex flex-col px-4 py-1 sm:pt-2 bg-gray-600">
-	<a sveltekit:prefetch href="/"><h1 class="drop-shadow-md text-base sm:text-lg">Linzer Gemeinderat in Torten</h1></a>
+	<a sveltekit:prefetch href="/"><h1 class="drop-shadow-md text-base sm:text-lg">Linzer Torten</h1></a>
 	<div class="flex flex-col items-baseline sm:flex-row gap-x-2">
 		<Menu />
 		<div class="flex flex-col items-end sm:flex-row gap-x-2 gap-y-1 sm:h-8">

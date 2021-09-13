@@ -1,4 +1,4 @@
-<h1 class="mb-4 mt-2">Linzer Torten</h1>
+<h1 class="mb-4 mt-2">Linzer Torten(diagramme)</h1>
 <h2 class="mb-2">Alle Anträge des Linzer Gemeinderats 2015-2021</h2>
 <p>
 	Diese kleine Web App veranschaulicht alle Abstimmungen des Linzer Gemeinderats in der letzten
@@ -16,6 +16,6 @@
 
 <style lang="postcss">
   p {
-    @apply mt-1;
+    @apply mt-1 max-w-prose;
   }
 </style>
