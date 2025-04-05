@@ -41,7 +41,7 @@
 	{#if parties && parties.length > 0}
 		<title>{getMeta(type).text + parties.join()}</title>
 	{/if}
-	<image width="100%" height="100%" x="" y="" href={getMeta(type).bg} />
+	<image width="100%" height="100%" href={getMeta(type).bg} />
 	{#if type === 'withheld'}
 		<image
 			width="100%" height="100%"
@@ -65,6 +65,6 @@
 	}
 
 	#segments {
-		clip-path: circle(60%);
+		clip-path: circle(30%);
 	}
 </style>
